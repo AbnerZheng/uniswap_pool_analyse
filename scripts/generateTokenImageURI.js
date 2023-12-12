@@ -20,9 +20,7 @@ const CHAINID_MAPPING = {
   44787: "celo",
   56   : "bnb",
 };
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
-const agent           = new HttpsProxyAgent("http://127.0.0.1:7890");
-Promise.all(TOKEN_URLS.map((url) => fetch(url, { agent }).then(res => res.json())))
+Promise.all(TOKEN_URLS.map((url) => fetch(url).then(res => res.json())))
   .then((lists) => {
     return lists.map((list) => list.tokens).flat();
   })

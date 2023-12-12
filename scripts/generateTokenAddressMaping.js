@@ -1,8 +1,6 @@
 const https               = require("https");
 const fs                  = require("fs");
-const { HttpsProxyAgent } = require("https-proxy-agent");
 
-const agent           = new HttpsProxyAgent("http://127.0.0.1:7890");
 const SKIP_PLATFORMS = [
   "tron",
   "sora",
@@ -65,7 +63,6 @@ const options = {
   port: 443,
   path: "/api/v3/coins/list?include_platform=true",
   method: "GET",
-  agent,
   rejectUnauthorized: false
 };
 
