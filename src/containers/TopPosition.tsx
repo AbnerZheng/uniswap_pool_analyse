@@ -14,7 +14,7 @@ import {
 import type { ColumnsType } from "antd/es/table";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
-import { getAge, getReadableDateTime } from "../utils/datetime";
+import { getAge, getReadableDateTime} from "../utils/datetime";
 import { getPoolPositions } from "../repos/uniswap";
 import { useAppContext } from "../context/app/appContext";
 import { Position } from "../common/interfaces/uniswap.interface";
@@ -28,7 +28,7 @@ import {
   processPriceChartData,
   round,
 } from "../utils/math";
-import { formatDollarAmount } from "../utils/format";
+import { formatDollarAmount, shortenEthAddress } from "../utils/format";
 import { AppActionType } from "../context/app/appReducer";
 import { Position as V3Position, Pool as V3Pool } from "@uniswap/v3-sdk";
 import { Token as V3Token } from "@uniswap/sdk-core";
@@ -178,6 +178,7 @@ interface PositionColumnDataType {
   key: string;
   positionId: string;
   isActive: boolean;
+  owner: string;
   strategy: PositionStrategy;
   roi: number;
   apr: number;
@@ -231,7 +232,7 @@ const TopPosition = () => {
       title: "ID",
       dataIndex: "positionId",
       key: "positionId",
-      width: 110,
+      width: 60,
       fixed: isTablet ? false : "left",
       filters: [
         {
@@ -282,10 +283,36 @@ const TopPosition = () => {
       ),
     },
     {
+      title: "Owner",
+      dataIndex: "owner",
+      key: "owner",
+      width: 80,
+      render: (ownerId, record) => (
+        <a
+          // Todo(abner) redirect to account page
+          href={`https://app.uniswap.org/#/pool/${ownerId}`}
+          target="_blank"
+          style={{
+            fontWeight: 600,
+          }}
+        >
+          <Tooltip
+            placement="right"
+            color="rgba(0,0,0,0.675)"
+            overlayStyle={{ whiteSpace: "pre-line" }}
+            trigger="hover"
+            title={`${ownerId}`}
+          >
+            {shortenEthAddress(ownerId)}
+          </Tooltip>
+        </a>
+      ),
+    },
+    {
       title: "ROI",
       dataIndex: "roi",
       key: "roi",
-      width: 110,
+      width: 60,
       sorter: (a, b) => a.roi - b.roi,
       render: (roi, record) => (
         <div>
@@ -400,7 +427,7 @@ const TopPosition = () => {
       title: "Fee APR",
       dataIndex: "apr",
       key: "apr",
-      width: 110,
+      width: 80,
       sorter: (a, b) => a.apr - b.apr,
       render: (apr, record) => (
         <div>
@@ -460,8 +487,9 @@ const TopPosition = () => {
       title: "Liquidity",
       dataIndex: "liquidity",
       key: "liquidity",
-      width: 150,
+      width: 60,
       sorter: (a, b) => a.liquidity - b.liquidity,
+      defaultSortOrder: 'descend',
       render: (liquidity, record) => (
         <div>
           <Popover
@@ -508,7 +536,7 @@ const TopPosition = () => {
       title: "Strategy",
       dataIndex: "strategy",
       key: "strategy",
-      width: 110,
+      width: 60,
       filters: [
         {
           text: "SHORT",
@@ -568,9 +596,9 @@ const TopPosition = () => {
     },
     {
       title: "Price Range",
+      width: 100,
       dataIndex: "priceRange",
       key: "priceRange",
-      width: 250,
       render: (priceRange, record) => {
         const isActive = record.isActive;
 
@@ -651,7 +679,7 @@ const TopPosition = () => {
       title: "Age",
       dataIndex: "createdAt",
       key: "createdAt",
-      width: 80,
+      width: 40,
       defaultSortOrder: "descend",
       sorter: (a, b) => Number(a.createdAt) - Number(b.createdAt),
       render: (createdAt) => (
@@ -673,7 +701,7 @@ const TopPosition = () => {
       title: "Action",
       key: "action",
       fixed: isTablet ? false : "right",
-      width: 100,
+      width: 40,
       render: (_, record) => (
         <Button
           style={{ fontSize: "0.875rem" }}
@@ -869,6 +897,7 @@ const TopPosition = () => {
 
         return {
           key: p.id,
+          owner: p.owner,
           positionId: p.id,
           isActive,
           roi,
@@ -997,8 +1026,9 @@ const TopPosition = () => {
           <AntdTable
             columns={columns}
             dataSource={positions}
+            defaultSortField="column1"
             scroll={{ x: 1000 }}
-            size="middle"
+            size="small"
             loading={isLoading}
           />
         </ConfigProvider>

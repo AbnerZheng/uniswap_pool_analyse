@@ -71,6 +71,7 @@ export interface Pool {
 
 export interface Position {
   id: string;
+  owner: string;
   tickLower: {
     tickIdx: string;
     feeGrowthOutside0X128: string;

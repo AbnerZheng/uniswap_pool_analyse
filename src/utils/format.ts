@@ -4,7 +4,7 @@ import numbro from "numbro";
 export const formatDollarAmount = (
   num: number | undefined,
   digits = 2,
-  round = true
+  round = true,
 ) => {
   if (num === 0) return "$0.00";
   if (!num) return "-";
@@ -37,4 +37,16 @@ export const formatAmount = (num: number | undefined, digits = 2) => {
       billion: "B",
     },
   });
+};
+
+
+export const shortenEthAddress = (address: string, startLength: number = 6, endLength: number = 4, separator: string = "..."): string => {
+  if (address.length < startLength + endLength + separator.length) {
+    return address; // 如果地址长度本身比设定的简化长度还短，则不做修改
+  }
+
+  const startPart: string = address.substring(0, startLength);
+  const endPart: string = address.substring(address.length - endLength);
+
+  return `${startPart}${separator}${endPart}`;
 };

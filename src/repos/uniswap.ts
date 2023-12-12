@@ -386,6 +386,7 @@ const _getPoolPositionsByPage = async (
       ]
     }, first: 1000, skip: ${page * 1000}) {
       id
+      owner
       tickLower {
         tickIdx
         feeGrowthOutside0X128
@@ -424,9 +425,9 @@ export const getPoolPositions = async (
   let page = 0;
   while (true) {
     const [p1, p2, p3] = await Promise.all([
-      _getPoolPositionsByPage(poolAddress, page),
-      _getPoolPositionsByPage(poolAddress, page + 1),
-      _getPoolPositionsByPage(poolAddress, page + 2),
+      _getPoolPositionsByPage(poolAddress, page, priceToken0, priceToken1),
+      _getPoolPositionsByPage(poolAddress, page + 1, priceToken0, priceToken1),
+      _getPoolPositionsByPage(poolAddress, page + 2, priceToken0, priceToken1),
     ]);
 
     result = [...result, ...p1, ...p2, ...p3];
