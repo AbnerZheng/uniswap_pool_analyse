@@ -1,3 +1,5 @@
+import BigNumber from "bignumber.js";
+
 export interface Network {
   id: string;
   chainId: number;
@@ -25,6 +27,7 @@ export interface Tick {
 interface TokenDayData {
   priceUSD: string;
 }
+
 export interface Token {
   id: string;
   name: string;
@@ -47,6 +50,7 @@ export interface PoolDayData {
   low: string;
   close: string;
 }
+
 export interface Pool {
   id: string;
   feeTier: string;
@@ -87,4 +91,64 @@ export interface Position {
   collectedFeesToken1: string;
   feeGrowthInside0LastX128: string;
   feeGrowthInside1LastX128: string;
+}
+
+export interface PositionSnapshot {
+  position: Position;
+  pool: Pool;
+  liquidity: string;
+  blockNumber: string;
+  timestamp: string;
+  depositedToken0: string;
+  depositedToken1: string;
+  withdrawnToken0: string;
+  withdrawnToken1: string;
+  collectedFeesToken0: string;
+  collectedFeesToken1: string;
+  transaction: {
+    mints: [{
+      transaction: {
+        id: string
+      }
+      amountUSD: string;
+    }]
+    burns: [{
+      transaction: {
+        id: string;
+      }
+      amountUSD: string;
+    }];
+  };
+}
+
+export interface LPHoldingRecord {
+  id: string;
+  opening: boolean;
+  tokenID0: string;
+  tokenID1: string;
+  feeTire: string;
+
+  // lp opened
+  principalUSD: BigNumber;
+  principalToken0: BigNumber;
+  principalToken1: BigNumber;
+
+  openToken0Price: BigNumber;
+  openToken1Price: BigNumber;
+  openTransaction: string;
+  openTimestamp: string;
+
+  feeUSD?: BigNumber;
+  feeToken0?: BigNumber;
+  feeToken1?: BigNumber;
+  // lp closed or present value if still opening
+  // fees are included
+  equityUSD?: BigNumber;
+  equityToken0?: BigNumber;
+  equityToken1?: BigNumber;
+  equityToken0Price?: BigNumber;
+  equityToken1Price?: BigNumber;
+
+  closeTransaction?: string;
+  closeTimestamp?: string;
 }

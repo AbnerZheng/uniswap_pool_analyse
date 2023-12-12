@@ -7,16 +7,20 @@ import {
 } from "../utils/uniswapv3/helper";
 import lscache from "../utils/lscache";
 import {
+  LPHoldingRecord,
   Pool,
-  Position,
+  Position, PositionSnapshot,
   Tick,
   Token,
 } from "../common/interfaces/uniswap.interface";
 import { averageArray } from "../utils/math";
+import BigNumber from "bignumber.js";
+import { getPriceForTokenByContract } from "./coingecko";
+import { calculatePositionFees } from "../utils/uniswapv3/math";
 
 export const getAvgTradingVolume = async (
   poolAddress: string,
-  numberOfDays: number = 7
+  numberOfDays: number = 7,
 ): Promise<number> => {
   const { poolDayDatas } = await _queryUniswap(`{
     poolDayDatas(skip: 1, first: ${numberOfDays}, orderBy: date, orderDirection: desc, where:{pool: "${poolAddress}"}) {
@@ -25,7 +29,7 @@ export const getAvgTradingVolume = async (
   }`);
 
   const volumes = poolDayDatas.map((d: { volumeUSD: string }) =>
-    Number(d.volumeUSD)
+    Number(d.volumeUSD),
   );
 
   return averageArray(volumes);
@@ -33,12 +37,12 @@ export const getAvgTradingVolume = async (
 
 const _getPoolTicksByPage = async (
   poolAddress: string,
-  page: number
+  page: number,
 ): Promise<Tick[]> => {
   const res = await _queryUniswap(`{
     ticks(first: 1000, skip: ${
-      page * 1000
-    }, where: { poolAddress: "${poolAddress}" }, orderBy: tickIdx) {
+    page * 1000
+  }, where: { poolAddress: "${poolAddress}" }, orderBy: tickIdx) {
       tickIdx
       liquidityNet
       price0
@@ -93,7 +97,7 @@ export const getTopTokenList = async (): Promise<Token[]> => {
   const cacheKey = `${getCurrentNetwork().id}_getTopTokenList`;
   const cacheData = lscache.get(cacheKey);
   const searchTokenPageItems = localStorage.getItem(
-    `SearchTokenPage_${getCurrentNetwork().id}_tokens`
+    `SearchTokenPage_${getCurrentNetwork().id}_tokens`,
   );
   if (cacheData) {
     if (searchTokenPageItems !== null) {
@@ -149,7 +153,7 @@ export const getToken = async (tokenAddress: string): Promise<Token> => {
 
 export const getPoolFromPair = async (
   token0: Token,
-  token1: Token
+  token1: Token,
 ): Promise<Pool[]> => {
   const sortedTokens = sortTokens(token0, token1);
 
@@ -204,15 +208,182 @@ const _queryUniswap = async (query: string): Promise<any> => {
   return data.data;
 };
 
+const StableCoinSet = new Set([
+  "0x7F5c764cBc14f9669B88837ca1490cCa17c31607".toLowerCase(),
+]);
+
+const _getPositionSnapshotsForAddress = async (address: string, blockNumber: number = 0): Promise<PositionSnapshot[]> => {
+  try {
+    const res = await _queryUniswap(`{
+        positionSnapshots(
+          orderBy: blockNumber
+          orderDirection: desc
+          where: {
+            owner : ${address}
+            blockNumber_gte: ${blockNumber}
+          }
+        ){
+          position{
+            id
+            liquidity
+            tickLower{
+              tickIdx 
+              feeGrowthOutside0X128
+            }
+            tickUpper{
+              tickIdx
+              feeGrowthOutside0X128
+            }
+            feeGrowthInside0LastX128
+            feeGrowthInside1LastX128
+          }
+          pool {
+            token0{
+              id
+              decimals
+            }
+            token1{
+              id
+              decimals
+            }
+            feeGrowthGlobal0X128
+            feeGrowthGlobal1X128
+            feeTier
+          }
+          liquidity
+          blockNumber
+          timestamp
+          depositedToken0
+          depositedToken1
+          withdrawnToken0
+          withdrawnToken1
+          collectedFeesToken0
+          collectedFeesToken1
+          transaction{
+            mints{
+              transaction{
+                id
+              }
+              amountUSD
+            }
+            burns{
+              transaction{
+                id
+              }
+              amountUSD
+            }
+          }
+        }}
+    `);
+    return res.positionSnapshots;
+  } catch (e) {
+    return [];
+  }
+};
+
+// TODO(abner) support  increase/decrease liquidity partially if strategy need
+const getPositionSnapshots = async (address: string, blockNumber: number = 0) => {
+  const positionSnapshots = await _getPositionSnapshotsForAddress(address, blockNumber);
+  const positionStatus: Map<string, boolean> = new Map();
+  const lpHoldingRecords: LPHoldingRecord[] = [];
+  for (let i = positionSnapshots.length - 1; i >= 0; i--) {
+    const p = positionSnapshots[i];
+    const id = p.position.id;
+    const liquidity = new BigNumber(p.liquidity);
+    if (!positionStatus.has(id) && liquidity.gt(0) && p.transaction.mints.length) {
+      // open lp
+      let price0 = new BigNumber(0);
+      let price1 = new BigNumber(0);
+      if (StableCoinSet.has(p.pool.token0.id)) {
+        price0 = new BigNumber(1);
+        price1 = new BigNumber(p.transaction.mints[0].amountUSD).minus(p.depositedToken0).div(p.depositedToken1);
+      } else if (StableCoinSet.has(p.pool.token1.id)) {
+        price1 = new BigNumber(1);
+        price0 = new BigNumber(p.transaction.mints[0].amountUSD).minus(p.depositedToken1).div(p.depositedToken0);
+      }
+
+      lpHoldingRecords.push({
+        id,
+        feeTire: p.pool.feeTier, tokenID0: p.pool.token0.id, tokenID1: p.pool.token1.id,
+        openToken0Price: price0, openToken1Price: price1,
+        opening: true,
+        openTimestamp: p.timestamp,
+        principalToken0: new BigNumber(p.depositedToken0),
+        principalToken1: new BigNumber(p.depositedToken1),
+        principalUSD: new BigNumber(p.transaction.mints[0].amountUSD),
+        openTransaction: p.transaction.mints[0].transaction.id,
+      });
+      positionStatus.set(id, true);
+    } else if (positionStatus.get(id) && liquidity.eq(0) && p.transaction.burns.length) {
+      // close lp
+      lpHoldingRecords.filter(r => r.id === id).forEach(r => {
+        let price0 = new BigNumber(0);
+        let price1 = new BigNumber(0);
+        if (StableCoinSet.has(p.pool.token0.id)) {
+          price0 = new BigNumber(1);
+          price1 = new BigNumber(p.transaction.burns[0].amountUSD).minus(p.withdrawnToken0).div(p.withdrawnToken1);
+        } else if (StableCoinSet.has(p.pool.token1.id)) {
+          price1 = new BigNumber(1);
+          price0 = new BigNumber(p.transaction.burns[0].amountUSD).minus(p.withdrawnToken1).div(p.withdrawnToken0);
+        }
+        r.opening = false;
+        r.equityToken0Price = price0;
+        r.equityToken1Price = price1;
+        r.feeToken0 = new BigNumber(p.collectedFeesToken0);
+        r.feeToken1 = new BigNumber(p.collectedFeesToken1);
+        const feeToken0USD = r.feeToken0.multipliedBy(r.equityToken0Price);
+        const feeToken1USD = r.feeToken1.multipliedBy(r.equityToken1Price);
+        r.feeUSD = feeToken0USD.plus(feeToken1USD);
+
+        r.equityToken0 = new BigNumber(p.withdrawnToken0).plus(r.feeToken0);
+        r.equityToken1 = new BigNumber(p.withdrawnToken1).plus(r.feeToken1);
+        r.equityUSD = r.feeUSD.plus(p.transaction.burns[0].amountUSD);
+        r.closeTransaction = p.transaction.burns[0].transaction.id;
+        r.closeTimestamp = p.timestamp;
+      });
+      positionStatus.set(id, false);
+    }
+
+    for (const r1 of lpHoldingRecords.filter(r => r.opening)) {
+      // fill information for lp which are still opening
+      const price0 = await getPriceForTokenByContract(r1.tokenID0);
+      const price1 = await getPriceForTokenByContract(r1.tokenID1);
+      r1.equityToken0Price = new BigNumber(price0);
+      r1.equityToken1Price = new BigNumber(price1);
+      const positionSnapshot = positionSnapshots.find(pp => pp.position.id === r1.id);
+      const fees = calculatePositionFees(positionSnapshot!.pool, positionSnapshot!.position, positionSnapshot!.pool.token0, positionSnapshot!.pool.token1);
+      r1.feeToken0 = new BigNumber(fees[0]);
+      r1.feeToken1 = new BigNumber(fees[1]);
+      r1.feeUSD = r1.feeToken0.multipliedBy(price0).plus(r1.feeToken1.multipliedBy(price1));
+
+
+
+    }
+  }
+
+};
+
+
 const _getPoolPositionsByPage = async (
   poolAddress: string,
-  page: number
+  page: number,
+  priceToken0: number,
+  priceToken1: number
 ): Promise<Position[]> => {
   try {
     const res = await _queryUniswap(`{
-    positions(where: {
-      pool: "${poolAddress}",
-      liquidity_gt: 0,
+    positions(
+      where: {
+        and: [
+          {pool: "${poolAddress}"},
+          {liquidity_gt: 0}
+          {or: [{
+                  depositedToken0_gt: ${5000 / (priceToken0 || 1)}
+                }, {
+                  depositedToken1_gt: ${5000 / (priceToken1 || 1)}
+                }]
+          }
+      ]
     }, first: 1000, skip: ${page * 1000}) {
       id
       tickLower {
@@ -237,7 +408,6 @@ const _getPoolPositionsByPage = async (
       }
     }
   }`);
-
     return res.positions;
   } catch (e) {
     return [];
@@ -245,7 +415,9 @@ const _getPoolPositionsByPage = async (
 };
 
 export const getPoolPositions = async (
-  poolAddress: string
+  poolAddress: string,
+  priceToken0: number,
+  priceToken1: number
 ): Promise<Position[]> => {
   const PAGE_SIZE = 3;
   let result: Position[] = [];
@@ -269,8 +441,8 @@ export const getPoolPositions = async (
 const getBulkTokens = async (tokenAddresses: string[]): Promise<Token[]> => {
   const res = await _queryUniswap(`{
     tokens(where: {id_in: [${tokenAddresses
-      .map((id) => `"${id}"`)
-      .join(",")}]}) {
+    .map((id) => `"${id}"`)
+    .join(",")}]}) {
       id
       name
       symbol
@@ -292,7 +464,7 @@ const getBulkTokens = async (tokenAddresses: string[]): Promise<Token[]> => {
 
 export const getPools = async (
   totalValueLockedUSD_gte: number,
-  volumeUSD_gte: number
+  volumeUSD_gte: number,
 ): Promise<{
   pools: Pool[];
   tokens: Token[];
@@ -329,8 +501,8 @@ export const getPools = async (
     const tokenIds = getUniqueItems(
       res.pools.reduce(
         (acc: string[], p: Pool) => [...acc, p.token0.id, p.token1.id],
-        []
-      )
+        [],
+      ),
     );
     const queryPage = Math.ceil(tokenIds.length / 100);
     // batch query getBulkTokens function by page using Promise.all
@@ -339,8 +511,8 @@ export const getPools = async (
         const start = i * 100;
         const end = start + 100;
         return getBulkTokens(tokenIds.slice(start, end));
-      })
-    ).then((res) => res.flat());
+      }),
+    ).then(res => res.flat());
     // sort token by volume
     tokens.sort((a, b) => Number(b.volumeUSD) - Number(a.volumeUSD));
     // map poolCount

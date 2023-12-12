@@ -7,6 +7,7 @@ interface Token {
   id: string;
   name: string;
 }
+
 export const getCoingeckoToken = (contractAddress: string): Token | null => {
   const mapper = tokenAddressMapping as { [key: string]: any };
   const currentPlatform = getCurrentNetwork().id;
@@ -30,16 +31,24 @@ enum QueryPeriodEnum {
   ONE_YEAR = "90",
   MAX = "max",
 }
+
+export const getPriceForTokenByContract = async (contractAddress: string): Promise<number> => {
+  const token = getCoingeckoToken(contractAddress);
+  if (!token) return 0;
+  const priceRes = (await axios.get(`https://api.coingecko.com/api/v3/simple/price?ids=${token.id}&vs_currencies = usd`)) as any;
+  return priceRes[token.id]?.usd || 0;
+};
+
 export const getPriceChart = async (
   contractAddress: string,
-  queryPeriod: QueryPeriodEnum = QueryPeriodEnum.ONE_MONTH
+  queryPeriod: QueryPeriodEnum = QueryPeriodEnum.ONE_MONTH,
 ): Promise<PriceChart | null> => {
   const token = getCoingeckoToken(contractAddress);
 
   if (!token) return null;
 
   const marketChartRes = (await axios.get(
-    `https://api.coingecko.com/api/v3/coins/${token.id}/market_chart?vs_currency=usd&days=${queryPeriod}`
+    `https://api.coingecko.com/api/v3/coins/${token.id}/market_chart?vs_currency=usd&days=${queryPeriod}`,
   )) as any;
 
   const prices = marketChartRes.data.prices.map(
@@ -47,7 +56,7 @@ export const getPriceChart = async (
       ({
         timestamp: d[0],
         value: d[1],
-      } as Price)
+      } as Price),
   );
 
   return {

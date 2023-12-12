@@ -34,6 +34,7 @@ import { Position as V3Position, Pool as V3Pool } from "@uniswap/v3-sdk";
 import { Token as V3Token } from "@uniswap/sdk-core";
 import { getCurrentNetwork } from "../common/network";
 import { Table } from "../common/components/atomic";
+import BigNumber from "bignumber.js";
 
 const Container = styled.div`
   background: rgba(255, 255, 255, 0.05);
@@ -80,6 +81,7 @@ const PriceRange = styled.div`
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(12.5px);
   }
+
   & > .lower,
   .upper,
   .price {
@@ -98,11 +100,13 @@ const PriceRange = styled.div`
     transform: translateX(50%);
     background: #25af60;
   }
+
   & > .price {
     left: 50%;
     background: #f70377;
     transform: translateX(-50%);
   }
+
   & > .upper {
     right: 10px;
     transform: translateX(-50%);
@@ -135,9 +139,11 @@ export const ROITable = styled.div`
   margin-top: 7px;
 
   padding: 6px 12px;
+
   &.adjust-padding-right {
     padding-right: 6px;
   }
+
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   font-size: 0.8rem;
@@ -152,6 +158,7 @@ export const ROITable = styled.div`
     & > div:nth-child(2) {
       text-align: right;
     }
+
     & > div:nth-child(3) {
       text-align: left;
       background: rgba(255, 255, 255, 0.05);
@@ -166,6 +173,7 @@ enum PositionStrategy {
   MIDDLE = "MIDDLE",
   SHORT = "SHORT",
 }
+
 interface PositionColumnDataType {
   key: string;
   positionId: string;
@@ -653,7 +661,7 @@ const TopPosition = () => {
             color="rgba(0,0,0,0.675)"
             overlayStyle={{ whiteSpace: "pre-line" }}
             title={`${getReadableDateTime(
-              createdAt
+              createdAt,
             )}\r\n(click to copy timestamp)`}
           >
             {getAge(createdAt)}
@@ -720,20 +728,20 @@ const TopPosition = () => {
     let currentPrice = getPriceFromTick(
       currentTick,
       token0?.decimals || "18",
-      token1?.decimals || "18"
+      token1?.decimals || "18",
     );
     if (isPairToggled) {
       currentPrice = getPriceFromTick(
         -currentTick,
         token0?.decimals || "18",
-        token1?.decimals || "18"
+        token1?.decimals || "18",
       );
     }
 
     // calculate strategy based on price fluctuation
     const priceDataPoints = processPriceChartData(
       token0PriceChart,
-      token1PriceChart
+      token1PriceChart,
     );
     // Strategy short = 1d, calculate max daily price fluctuation
     const dailyPricePoints = groupPricePointsMinMaxByDay(priceDataPoints);
@@ -764,23 +772,23 @@ const TopPosition = () => {
         let lowerPrice = getPriceFromTick(
           upperTick,
           token0?.decimals || "18",
-          token1?.decimals || "18"
+          token1?.decimals || "18",
         );
         let upperPrice = getPriceFromTick(
           lowerTick,
           token0?.decimals || "18",
-          token1?.decimals || "18"
+          token1?.decimals || "18",
         );
         if (isPairToggled) {
           lowerPrice = getPriceFromTick(
             -lowerTick,
             token0?.decimals || "18",
-            token1?.decimals || "18"
+            token1?.decimals || "18",
           );
           upperPrice = getPriceFromTick(
             -upperTick,
             token0?.decimals || "18",
-            token1?.decimals || "18"
+            token1?.decimals || "18",
           );
         }
 
@@ -793,12 +801,12 @@ const TopPosition = () => {
         const tokenA = new V3Token(
           network.chainId,
           token0?.id || "",
-          Number(token0?.decimals)
+          Number(token0?.decimals),
         );
         const tokenB = new V3Token(
           network.chainId,
           token1?.id || "",
-          Number(token1?.decimals)
+          Number(token1?.decimals),
         );
         const v3Pool = new V3Pool(
           tokenA,
@@ -806,7 +814,7 @@ const TopPosition = () => {
           Number(pool.feeTier),
           pool.sqrtPrice,
           pool.liquidity,
-          Number(pool.tick)
+          Number(pool.tick),
         );
         const position = new V3Position({
           pool: v3Pool,
@@ -831,7 +839,7 @@ const TopPosition = () => {
           pool,
           p,
           isPairToggled ? token1 : token0,
-          isPairToggled ? token0 : token1
+          isPairToggled ? token0 : token1,
         );
         const unclaimedFee0 = isPairToggled
           ? unclaimedFees[1]
@@ -889,22 +897,22 @@ const TopPosition = () => {
 
           unclaimedROI,
         } as PositionColumnDataType;
-      }
+      },
     );
 
     let validTopPositions = topPositions
       .sort((a, b) => b.createdAt - a.createdAt)
       .filter(
         (p) =>
-          p.liquidity >= 500 && p.roi > 0 && Date.now() - p.createdAt >= 3600000
+          p.liquidity >= 500 && p.roi > 0 && Date.now() - p.createdAt >= 3600000,
       )
       .filter(
         // filter out positions that ROI is greater than 100,000% (high possiblity of wrong data)
-        (p) => p.roi <= 100000
+        (p) => p.roi <= 100000,
       )
       .filter(
         // filter out positions that unclaimedFee < 0 (high possiblity of wrong data)
-        (p) => p.unclaimedFee0 >= 0 && p.unclaimedFee1 >= 0
+        (p) => p.unclaimedFee0 >= 0 && p.unclaimedFee1 >= 0,
       );
 
     // filter out outliers (unclaimedROI > 5 * average consecutive unclaimedROI)
@@ -914,11 +922,11 @@ const TopPosition = () => {
     for (let i = 0; i < unclaimedROIs.length; i++) {
       const consecutiveUnclaimedROIsAfter = unclaimedROIs.slice(
         Math.min(i + 1, unclaimedROIs.length - 1),
-        Math.min(i + consecutive + 1, unclaimedROIs.length - 1)
+        Math.min(i + consecutive + 1, unclaimedROIs.length - 1),
       );
       const consecutiveUnclaimedROIsBefore = unclaimedROIs.slice(
         Math.max(i - consecutive - 1, 0),
-        Math.max(i - 1, 0)
+        Math.max(i - 1, 0),
       );
       const consecutiveUnclaimedROIs = [
         ...consecutiveUnclaimedROIsAfter,
@@ -933,8 +941,8 @@ const TopPosition = () => {
 
     setPositions(
       validTopPositions.filter(
-        (p, i) => p.unclaimedROI / averageUnclaimedROIs[i] <= 5
-      )
+        (p, i) => p.unclaimedROI / averageUnclaimedROIs[i] <= 5,
+      ),
     );
   };
 
@@ -942,7 +950,7 @@ const TopPosition = () => {
     if (!appContext.state.pool) return;
 
     setIsLoading(true);
-    getPoolPositions(appContext.state.pool.id).then((allPositions) => {
+    getPoolPositions(appContext.state.pool.id, new BigNumber(appContext.state.pool.token0Price).toNumber(), new BigNumber(appContext.state.pool.token1Price).toNumber()).then((allPositions) => {
       processTopPositions(allPositions);
       setAllPositions(allPositions);
       setIsLoading(false);

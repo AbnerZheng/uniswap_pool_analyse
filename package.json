@@ -41,7 +41,9 @@
     "gatsby-plugin-global-styles": "^1.0.17",
     "gatsby-plugin-plausible": "^0.0.7",
     "gatsby-plugin-styled-components": "^6.2.0",
+    "https-proxy-agent": "^7.0.2",
     "js-search": "^2.0.0",
+    "node-fetch": "2",
     "numbro": "^2.3.6",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.0",
@@ -63,7 +65,7 @@
     "generate-token-image-uri-mapping": "node ./scripts/generateTokenImageURI.js",
     "generate-contract-address-mapping": "node ./scripts/generateTokenAddressMaping.js",
     "generate": "yarn generate-token-image-uri-mapping && yarn generate-contract-address-mapping",
-    "start": "gatsby develop -p 3000 -o",
+    "start": "npx gatsby develop -p 3000 -o --inspect",
     "build": "yarn generate && gatsby build",
     "deploy": "firebase deploy",
     "serve": "serve public"
@@ -87,6 +89,7 @@
     ]
   },
   "devDependencies": {
+    "prettier": "^3.1.1",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.3.0",
