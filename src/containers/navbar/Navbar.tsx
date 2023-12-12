@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { ScreenWidth } from "../../utils/styled";
 import Logo from "./Logo";
-import Announcement from "./Announcement";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 // import { DangerButton } from "../../common/components/atomic";
@@ -36,24 +35,6 @@ const Twitter = styled.a`
   &:hover {
     color: #1f9cea;
     transform: scale(1.25) rotate(18deg);
-  }
-`;
-const GitcoinGrant = styled.div`
-  font-size: 1rem;
-  position: relative;
-
-  & a {
-    text-decoration: none;
-  }
-
-  & .countdown {
-    position: absolute;
-    right: 0;
-    color: white;
-    display: block;
-    text-align: right;
-    font-size: 0.675rem;
-    margin-top: 7px;
   }
 `;
 
@@ -93,31 +74,6 @@ const Navbar: React.FC = () => {
     <>
       <NavbarContainer>
         <Logo />
-        <Menubar id="menubar-container">
-          {/* <GitcoinGrant>
-            <a
-              target="_blank"
-              href="https://explorer.gitcoin.co/#/round/1/0x12bb5bbbfe596dbc489d209299b8302c3300fa40/0x12bb5bbbfe596dbc489d209299b8302c3300fa40-78"
-            >
-              <DangerButton>
-                <span>Support us on Gitcoin 🌱</span>
-              </DangerButton>
-              <span className="countdown">
-                Gitcoin Grants beta round will be ended in
-                <br />
-                {timeLeft}.
-              </span>
-            </a>
-          </GitcoinGrant> */}
-          <Twitter
-            href="https://twitter.com/uniswapdotfish"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FontAwesomeIcon icon={faTwitter} />
-          </Twitter>
-          <Announcement />
-        </Menubar>
       </NavbarContainer>
       {/* <div style={{ marginBottom: 20 }}></div> */}
     </>

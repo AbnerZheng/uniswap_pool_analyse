@@ -69,14 +69,6 @@ const Footer = () => {
         >
           How it works?
         </a>
-        <a
-          href="https://github.com/chunrapeepat/uniswap.fish"
-          rel="noreferrer"
-          target="_blank"
-        >
-          Source Code (Github)
-        </a>
-        <a href="mailto:hello@uniswap.fish">Contact: hello@uniswap.fish</a>
       </div>
     </FooterContainer>
   );

@@ -10,29 +10,6 @@ const ButtonStyle = styled.button`
   padding: 6px 10px;
   cursor: pointer;
 `;
-export const FeedbackButton = styled(ButtonStyle)`
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  z-index: 999;
-  color: white;
-  background: #ea4c89;
-
-  padding: 0;
-  font-size: 1.2rem;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-
-  &:hover {
-    background: #ea6296;
-  }
-
-  @media only screen and (max-width: ${ScreenWidth.TABLET}px) {
-    right: 20px;
-    bottom: 20px;
-  }
-`;
 
 export const Button = styled(ButtonStyle)`
   background: rgba(255, 255, 255, 0.1);

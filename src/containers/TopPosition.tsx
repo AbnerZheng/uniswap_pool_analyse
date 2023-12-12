@@ -1026,7 +1026,6 @@ const TopPosition = () => {
           <AntdTable
             columns={columns}
             dataSource={positions}
-            defaultSortField="column1"
             scroll={{ x: 1000 }}
             size="small"
             loading={isLoading}

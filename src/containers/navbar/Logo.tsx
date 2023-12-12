@@ -214,16 +214,11 @@ const LINKS = [
     useGatsbyLink: true,
   },
   {
-    target: "_blank",
-    href: "https://github.com/normdoow/uniswap.fish",
+    target: undefined,
+    href: "/account",
     icon: "🧑🏻‍💻",
-    text: "Github Repository",
-  },
-  {
-    target: "_blank",
-    href: "https://twitter.com/uniswapdotfish",
-    icon: "🐦",
-    text: "@uniswapdotfish",
+    text: "Account Analysis",
+    useGatsbyLink: true,
   },
 ];
 

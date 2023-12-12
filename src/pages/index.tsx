@@ -13,7 +13,6 @@ import SelectPairModal, {
 import Setting from "../containers/setting/Setting";
 import { ScreenWidth } from "../utils/styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FeedbackButton } from "../common/components/atomic";
 import { useAppContext } from "../context/app/appContext";
 import {
   faArrowDown,
@@ -26,7 +25,6 @@ import ImpermanentLossModal from "../containers/ImpermanentLossModal";
 import CreatePositionModal from "../containers/CreatePositionModal";
 import TopPosition from "../containers/TopPosition";
 import { Link } from "gatsby";
-import { SEO } from "../common/components/Head";
 
 const BodyContainer = styled.div`
   max-width: 900px;
@@ -126,6 +124,7 @@ const Landing = styled.div`
       margin-bottom: 5px;
     }
   }
+
   & .calculator {
     color: #bbb;
     font-size: 0.875rem;
@@ -144,9 +143,11 @@ const Landing = styled.div`
     & .uniswap-foundation {
       display: none;
     }
+
     & .calculator .right {
       display: none;
     }
+
     & .calculator .down {
       display: inline;
     }
@@ -161,32 +162,6 @@ function App() {
       <SelectPairModal />
       <ImpermanentLossModal />
       <CreatePositionModal />
-
-      <FeedbackButton
-        onClick={() => {
-          const app_context = {
-            token0: state.token0?.id,
-            token1: state.token1?.id,
-            chain: getCurrentNetwork().id,
-            pool: state.pool?.id,
-            depositAmount: state.depositAmountValue,
-            priceRange: state.priceRangeValue,
-            mostActivePrice: state.priceAssumptionValue,
-          };
-          if (process.env.NODE_ENV === "development") {
-            return console.log({ app_context });
-          }
-          window.freddyWidget.setOptions({
-            custom_fields: {
-              app_context: JSON.stringify(app_context),
-            },
-          });
-          window.freddyWidget.show();
-        }}
-      >
-        <FontAwesomeIcon icon={faBug} />
-      </FeedbackButton>
-
       <Navbar />
 
       {!state.pool && (
@@ -269,10 +244,3 @@ function App() {
 }
 
 export default App;
-export const Head = () => {
-  const title = "Uniswap V3 Fee Calculator - Uniswap.fish";
-  const description =
-    "Calculate your Uniswap v3 positions fee returns, APY, APR, ROI, yields, and impermanent loss based on how much pool liquidity you provide.";
-
-  return <SEO title={title} description={description} />;
-};
