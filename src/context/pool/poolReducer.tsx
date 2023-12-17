@@ -1,3 +1,4 @@
+import { local } from "d3";
 import {
   Network,
   Pool,
@@ -6,6 +7,7 @@ import {
 import { PoolColumnDataType } from "../../containers/pools/TopPoolTable";
 import {
   favoritePoolIdsLocalStorageKey,
+  followingAccountsLocalStorageKey,
   PoolContextState,
 } from "./poolContext";
 
@@ -15,6 +17,9 @@ export enum PoolActionType {
   SET_TOKENS_CACHE = "SET_TOKENS_CACHE",
   SET_FAVORITE_POOL_IDS = "SET_FAVORITE_POOL_IDS",
   INIT_FAVORITE_POOL_IDS = "INIT_FAVORITE_POOL_IDS",
+  SET_FOLLOWING_ACCOUTNS_IDS = "SET_FOLLOWING_ACCOUNTS_IDS",
+  INIT_FOLLOWING_ACCOUTNS_IDS = "INIT_FOLLOWING_ACCOUNTS_IDS",
+  SET_ANALYSIS_ACCOUNT_ID = "SET_ANALYSIS_ACCOUNT_ID",
 }
 
 export type PoolContextAction =
@@ -46,6 +51,21 @@ export type PoolContextAction =
   | {
       type: PoolActionType.INIT_FAVORITE_POOL_IDS;
       payload: any;
+    }
+  | {
+      type: PoolActionType.SET_FOLLOWING_ACCOUTNS_IDS;
+      payload: {
+        accountId: string;
+        accountName: string;
+      };
+    }
+  | {
+      type: PoolActionType.INIT_FOLLOWING_ACCOUTNS_IDS;
+      payload: any;
+    }
+    | {
+      type: PoolActionType.SET_ANALYSIS_ACCOUNT_ID;
+      payload: string;
     };
 
 export const poolContextReducer = (
@@ -93,6 +113,32 @@ export const poolContextReducer = (
         ...state,
         favoritePoolIds: action.payload,
       };
+    }
+    case PoolActionType.SET_FOLLOWING_ACCOUTNS_IDS: {
+      const newState = {
+        ...state,
+        followingAccounts: {
+          ...state.followingAccounts,
+          [action.payload.accountId]: action.payload.accountName,
+        },
+      };
+      localStorage.setItem(
+        followingAccountsLocalStorageKey,
+        JSON.stringify(newState.followingAccounts)
+      );
+      return newState;
+    }
+    case PoolActionType.INIT_FOLLOWING_ACCOUTNS_IDS: {
+      return {
+        ...state,
+        followingAccounts: action.payload,
+      };
+    }
+    case PoolActionType.SET_ANALYSIS_ACCOUNT_ID: {
+      return {
+        ...state,
+        analysisAccountId: action.payload,
+      }
     }
   }
 };

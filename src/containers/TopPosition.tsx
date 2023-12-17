@@ -35,6 +35,7 @@ import { Token as V3Token } from "@uniswap/sdk-core";
 import { getCurrentNetwork } from "../common/network";
 import { Table } from "../common/components/atomic";
 import BigNumber from "bignumber.js";
+import { usePoolContext } from "../context/pool/poolContext";
 
 const Container = styled.div`
   background: rgba(255, 255, 255, 0.05);
@@ -710,20 +711,6 @@ const TopPosition = () => {
               type: AppActionType.UPDATE_PRICE_RANGE,
               payload: [record.priceRange.lower, record.priceRange.upper],
             });
-            messageApi.open({
-              type: "success",
-              content: `Price range setting has been updated`,
-            });
-
-            // Plausible Feature Tracking
-            const props = {
-              featureId: "Top Positions Apply",
-            };
-            if (typeof window.plausible !== "undefined") {
-              window.plausible("FeatureUsage", {
-                props,
-              });
-            }
           }}
         >
           <Tooltip

@@ -125,9 +125,10 @@ export interface PositionSnapshot {
 export interface LPHoldingRecord {
   id: string;
   opening: boolean;
+  poolId: string;
   tokenID0: string;
   tokenID1: string;
-  feeTire: string;
+  feeTier: string;
 
   // lp opened
   principalUSD: BigNumber;

@@ -11,11 +11,14 @@ import { Dropdown } from "antd";
 import { NETWORKS } from "../common/network";
 import {
   favoritePoolIdsLocalStorageKey,
+  followingAccountsLocalStorageKey,
   usePoolContext,
 } from "../context/pool/poolContext";
 import { PoolActionType } from "../context/pool/poolReducer";
 import { getQueryParam, setQueryParam } from "../utils/querystring";
 import { Network } from "../common/interfaces/uniswap.interface";
+import { FollowingAccounts } from "../containers/analysis/FollowingAccounts";
+import { LPHistory } from "../containers/analysis/LPHistory";
 
 const BodyContainer = styled.div`
   max-width: 900px;
@@ -50,6 +53,7 @@ const NetworkDropdown = styled.div`
     border-radius: 50%;
     margin-right: 7px;
   }
+
   & svg {
     font-size: 0.875rem;
     margin-left: 7px;
@@ -66,9 +70,11 @@ const NetworkDropdownItem = styled.div`
     border-radius: 50%;
     margin-right: 15px;
   }
+
   & .name {
     color: black;
   }
+
   & .desc {
     color: #555;
     font-size: 0.8rem;
@@ -77,7 +83,7 @@ const NetworkDropdownItem = styled.div`
 `;
 
 function App() {
-  const poolContext = usePoolContext();
+  const accountAnalysisContext = usePoolContext();
 
   useEffect(() => {
     const networkId = getQueryParam("network");
@@ -95,16 +101,24 @@ function App() {
       }
     }
 
-    poolContext.dispatch({
+    const accountId = getQueryParam("accountId");
+    if (accountId) {
+      accountAnalysisContext.dispatch({
+        type: PoolActionType.SET_ANALYSIS_ACCOUNT_ID,
+        payload: accountId,
+      });
+    }
+
+    accountAnalysisContext.dispatch({
       type: PoolActionType.SET_CHAIN,
       payload: network,
     });
 
-    // load favorite pool ids
-    poolContext.dispatch({
-      type: PoolActionType.INIT_FAVORITE_POOL_IDS,
+    // load following account ids
+    accountAnalysisContext.dispatch({
+      type: PoolActionType.INIT_FOLLOWING_ACCOUTNS_IDS,
       payload: JSON.parse(
-        localStorage.getItem(favoritePoolIdsLocalStorageKey) || "{}"
+        localStorage.getItem(followingAccountsLocalStorageKey) || "{}"
       ),
     });
   }, []);
@@ -117,7 +131,7 @@ function App() {
           <NetworkDropdownItem
             key={network.id}
             onClick={() => {
-              poolContext.dispatch({
+              accountAnalysisContext.dispatch({
                 type: PoolActionType.SET_CHAIN,
                 payload: network,
               });
@@ -141,20 +155,20 @@ function App() {
       <Navbar />
       <BodyContainer>
         <HeaderContainer>
-          <h2>Pool Overview</h2>
-          {poolContext.state.chain && (
+          <h2>Account Analysis</h2>
+          {accountAnalysisContext.state.chain && (
             <Dropdown
               menu={{
                 items,
                 selectable: true,
-                defaultSelectedKeys: [poolContext.state.chain.id],
+                defaultSelectedKeys: [accountAnalysisContext.state.chain.id],
               }}
               trigger={["click"]}
               placement="bottomRight"
             >
               <NetworkDropdown>
-                <img src={poolContext.state.chain.logoURI} />
-                <span>{poolContext.state.chain.name}</span>
+                <img src={accountAnalysisContext.state.chain.logoURI} />
+                <span>{accountAnalysisContext.state.chain.name}</span>
                 <DownOutlined />
               </NetworkDropdown>
             </Dropdown>
@@ -162,11 +176,11 @@ function App() {
         </HeaderContainer>
         <Br />
 
-        {poolContext.state.chain && (
+        {accountAnalysisContext.state.chain && (
           <>
-            <FavoritePools />
+            <FollowingAccounts />
             <Br />
-            <TopPools />
+            <LPHistory />
           </>
         )}
 

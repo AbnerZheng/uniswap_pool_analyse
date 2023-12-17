@@ -4,18 +4,24 @@ import { PoolColumnDataType } from "../../containers/pools/TopPoolTable";
 import { poolContextReducer, PoolContextAction } from "./poolReducer";
 
 export const favoritePoolIdsLocalStorageKey = "poolOverview_favoritePoolIds";
+export const followingAccountsLocalStorageKey =
+  "accountAnalysis_followingAccounts";
 
 export interface PoolContextState {
   chain: Network | null;
   poolsCache: { [chainId: string]: PoolColumnDataType[] };
   tokensCache: { [chainId: string]: Token[] };
   favoritePoolIds: { [chainId: string]: string[] };
+  followingAccounts: { [accountId: string]: string };
+  analysisAccountId: string | null;
 }
 const initialState: PoolContextState = {
   chain: null,
   poolsCache: {},
   tokensCache: {},
   favoritePoolIds: {},
+  followingAccounts: {},
+  analysisAccountId: null,
 };
 
 interface PoolContextProviderProps {
