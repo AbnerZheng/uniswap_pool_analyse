@@ -30,13 +30,14 @@ import {
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import { formatDollarAmount } from "../../utils/format";
-import { round } from "../../utils/math";
+import { divideArray, round } from "../../utils/math";
 import { CheckboxValueType } from "antd/es/checkbox/Group";
 import { getCoingeckoToken } from "../../repos/coingecko";
 import { usePoolContext } from "../../context/pool/poolContext";
 import { PoolActionType } from "../../context/pool/poolReducer";
 import { NETWORKS } from "../../common/network";
 import { ScreenWidth } from "../../utils/styled";
+import { Recoverable } from "repl";
 
 const PairToken = styled.div`
   display: flex;
@@ -386,7 +387,7 @@ export const LPHistoryTable = ({
       title: "",
       dataIndex: "opening",
       key: "opening",
-      width: 40,
+      width: 5,
       fixed: "left",
       render: (opening) => {
         return (
@@ -397,16 +398,14 @@ export const LPHistoryTable = ({
     {
       title: "Pool",
       key: "pool",
-      width: 240,
+      width: 40,
       render: (_, record) => {
-        const token0 = getCoingeckoToken(record.tokenID0);
-        const token1 = getCoingeckoToken(record.tokenID1);
         const feeTier = record.feeTier;
         return (
           <PairToken>
             <h3>
               <span>
-                {token0?.name}/{token1?.name}
+                {record.tokenSymbol0}/{record.tokenSymbol1}
               </span>
               <FeePercentage>
                 {feeTier === "100" && <span>0.01%</span>}
@@ -424,6 +423,112 @@ export const LPHistoryTable = ({
               </a>
             </h3>
           </PairToken>
+        );
+      },
+    },
+    {
+      title: "Fee",
+      key: "feeUSD",
+      width: 40,
+      render: (_, record) => {
+        console.log(record);
+        return (
+          <Popover
+            placement="right"
+            color="rgba(0,0,0,0.875)"
+            content={
+              <div>
+                <div>
+                  <TokenIcon>
+                    <b>{record.tokenSymbol0}</b>
+                    <a
+                      target="_blank"
+                      href={`https://www.coingecko.com/en/coins/${getCoingeckoToken(
+                        record.tokenID0
+                      )?.id}`}
+                    >
+                      <FontAwesomeIcon
+                        style={{ marginLeft: 6 }}
+                        icon={faExternalLinkAlt}
+                      />
+                    </a>
+                  </TokenIcon>
+                  <Table className="adjust-padding-right">
+                    <div>
+                      <div>Price</div>
+                      <div></div>
+                      <div>
+                        {formatDollarAmount(Number(record.equityToken0Price))}
+                      </div>
+                    </div>
+                    <div>
+                      <div>Number</div>
+                      <div></div>
+                      <div>{record.feeToken1?.decimalPlaces(3).toString()}</div>
+                    </div>
+                    <div>
+                      <div>Value</div>
+                      <div></div>
+                      <div>
+                        {formatDollarAmount(
+                          record.feeToken1
+                            ?.multipliedBy(record.equityToken1Price!)
+                            .toNumber()
+                        )}
+                      </div>
+                    </div>
+                  </Table>
+                </div>
+
+                <div style={{ marginTop: 16 }}>
+                  <TokenIcon>
+                    {/* <img src={token1.logoURI} /> */}
+                    <b>{record.tokenSymbol1}</b>
+                    <a
+                      target="_blank"
+                      href={`https://www.coingecko.com/en/coins/${getCoingeckoToken(
+                        record.tokenID1
+                      )?.id}`}
+                    >
+                      <FontAwesomeIcon
+                        style={{ marginLeft: 6 }}
+                        icon={faExternalLinkAlt}
+                      />
+                    </a>
+                  </TokenIcon>
+                  <Table className="adjust-padding-right">
+                    <div>
+                      <div>Price</div>
+                      <div></div>
+                      <div>
+                        {formatDollarAmount(Number(record.equityToken1Price))}
+                      </div>
+                    </div>
+                    <div>
+                      <div>Number</div>
+                      <div></div>
+                      <div>{record.feeToken1?.decimalPlaces(3).toString()}</div>
+                    </div>
+                    <div>
+                      <div>USD</div>
+                      <div></div>
+                      <div>
+                        {formatDollarAmount(
+                          record.equityToken1Price
+                            ?.multipliedBy(record.feeToken1!)
+                            .toNumber()
+                        )}
+                      </div>
+                    </div>
+                  </Table>
+                </div>
+              </div>
+            }
+          >
+            <h3>
+              {formatDollarAmount(Number(record.feeUSD?.toString() || 0))}
+            </h3>
+          </Popover>
         );
       },
     },

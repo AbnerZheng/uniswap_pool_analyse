@@ -128,6 +128,8 @@ export interface LPHoldingRecord {
   poolId: string;
   tokenID0: string;
   tokenID1: string;
+  tokenSymbol0: string;
+  tokenSymbol1: string;
   feeTier: string;
 
   // lp opened

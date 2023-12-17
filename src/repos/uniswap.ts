@@ -234,16 +234,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "12368049913285458580200978499547",
       },
       pool: {
+        id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         token1: {
           id: "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
           decimals: "6",
+          symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110406942604219311187937492467171708429917490",
-        feeGrowthGlobal1X128: "140500404169410933591656145031393",
+        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
+        feeGrowthGlobal1X128: "140511792782193726920074558096223",
         feeTier: "3000",
       },
       liquidity: "199486544038781090",
@@ -283,16 +286,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "10090534199099423670173383523032",
       },
       pool: {
+        id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         token1: {
           id: "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
           decimals: "6",
+          symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110406942604219311187937492467171708429917490",
-        feeGrowthGlobal1X128: "140500404169410933591656145031393",
+        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
+        feeGrowthGlobal1X128: "140511792782193726920074558096223",
         feeTier: "3000",
       },
       liquidity: "626275517193904256",
@@ -332,16 +338,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "35437031951076198355058764067099500059731",
       },
       pool: {
+        id: "0xb533c12fb4e7b53b5524eab9b47d93ff6c7a456f",
         token0: {
           id: "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
           decimals: "6",
+          symbol: "USDC",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
-        feeGrowthGlobal0X128: "4792279302228460419608214388676",
-        feeGrowthGlobal1X128: "2322209834277144679521593799710839229811432",
+        feeGrowthGlobal0X128: "4802056043583890450540019081055",
+        feeGrowthGlobal1X128: "2324845059115635360297355813329894655716658",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -371,7 +380,7 @@ const _getPositionSnapshotsForAddress = async (
         liquidity: "0",
         tickLower: {
           tickIdx: "-269040",
-          feeGrowthOutside0X128: "11777782530770009896111539022127714487950624",
+          feeGrowthOutside0X128: "98629160073449301291825953445043993941966866",
         },
         tickUpper: {
           tickIdx: "-267720",
@@ -381,16 +390,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "11758501373664996579834465366520",
       },
       pool: {
+        id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         token1: {
           id: "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
           decimals: "6",
+          symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110406942604219311187937492467171708429917490",
-        feeGrowthGlobal1X128: "140500404169410933591656145031393",
+        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
+        feeGrowthGlobal1X128: "140511792782193726920074558096223",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -430,16 +442,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "35437031951076198355058764067099500059731",
       },
       pool: {
+        id: "0xb533c12fb4e7b53b5524eab9b47d93ff6c7a456f",
         token0: {
           id: "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
           decimals: "6",
+          symbol: "USDC",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
-        feeGrowthGlobal0X128: "4792279302228460419608214388676",
-        feeGrowthGlobal1X128: "2322209834277144679521593799710839229811432",
+        feeGrowthGlobal0X128: "4802056043583890450540019081055",
+        feeGrowthGlobal1X128: "2324845059115635360297355813329894655716658",
         feeTier: "3000",
       },
       liquidity: "109120458735762569",
@@ -479,16 +494,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "1696706126469403660587927266465106580755598",
       },
       pool: {
+        id: "0xb533c12fb4e7b53b5524eab9b47d93ff6c7a456f",
         token0: {
           id: "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
           decimals: "6",
+          symbol: "USDC",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
-        feeGrowthGlobal0X128: "4792279302228460419608214388676",
-        feeGrowthGlobal1X128: "2322209834277144679521593799710839229811432",
+        feeGrowthGlobal0X128: "4802056043583890450540019081055",
+        feeGrowthGlobal1X128: "2324845059115635360297355813329894655716658",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -528,16 +546,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "1696706126469403660587927266465106580755598",
       },
       pool: {
+        id: "0xb533c12fb4e7b53b5524eab9b47d93ff6c7a456f",
         token0: {
           id: "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
           decimals: "6",
+          symbol: "USDC",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
-        feeGrowthGlobal0X128: "4792279302228460419608214388676",
-        feeGrowthGlobal1X128: "2322209834277144679521593799710839229811432",
+        feeGrowthGlobal0X128: "4802056043583890450540019081055",
+        feeGrowthGlobal1X128: "2324845059115635360297355813329894655716658",
         feeTier: "3000",
       },
       liquidity: "306202230851639373",
@@ -567,7 +588,7 @@ const _getPositionSnapshotsForAddress = async (
         liquidity: "0",
         tickLower: {
           tickIdx: "-269040",
-          feeGrowthOutside0X128: "11777782530770009896111539022127714487950624",
+          feeGrowthOutside0X128: "98629160073449301291825953445043993941966866",
         },
         tickUpper: {
           tickIdx: "-267720",
@@ -577,16 +598,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "11758501373664996579834465366520",
       },
       pool: {
+        id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         token1: {
           id: "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
           decimals: "6",
+          symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110406942604219311187937492467171708429917490",
-        feeGrowthGlobal1X128: "140500404169410933591656145031393",
+        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
+        feeGrowthGlobal1X128: "140511792782193726920074558096223",
         feeTier: "3000",
       },
       liquidity: "569965692747744913",
@@ -626,16 +650,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "16522968113947081003321441572622",
       },
       pool: {
+        id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         token1: {
           id: "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
           decimals: "6",
+          symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110406942604219311187937492467171708429917490",
-        feeGrowthGlobal1X128: "140500404169410933591656145031393",
+        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
+        feeGrowthGlobal1X128: "140511792782193726920074558096223",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -675,16 +702,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "16522968113947081003321441572622",
       },
       pool: {
+        id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         token1: {
           id: "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
           decimals: "6",
+          symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110406942604219311187937492467171708429917490",
-        feeGrowthGlobal1X128: "140500404169410933591656145031393",
+        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
+        feeGrowthGlobal1X128: "140511792782193726920074558096223",
         feeTier: "3000",
       },
       liquidity: "355627396701729442",
@@ -724,16 +754,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "16522968113947081003321441572622",
       },
       pool: {
+        id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         token1: {
           id: "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
           decimals: "6",
+          symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110406942604219311187937492467171708429917490",
-        feeGrowthGlobal1X128: "140500404169410933591656145031393",
+        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
+        feeGrowthGlobal1X128: "140511792782193726920074558096223",
         feeTier: "3000",
       },
       liquidity: "334631650493231077",
@@ -773,16 +806,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "18420941968735313497860763092822",
       },
       pool: {
+        id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         token1: {
           id: "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
           decimals: "6",
+          symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110406942604219311187937492467171708429917490",
-        feeGrowthGlobal1X128: "140500404169410933591656145031393",
+        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
+        feeGrowthGlobal1X128: "140511792782193726920074558096223",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -822,16 +858,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "18420941968735313497860763092822",
       },
       pool: {
+        id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         token1: {
           id: "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
           decimals: "6",
+          symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110406942604219311187937492467171708429917490",
-        feeGrowthGlobal1X128: "140500404169410933591656145031393",
+        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
+        feeGrowthGlobal1X128: "140511792782193726920074558096223",
         feeTier: "3000",
       },
       liquidity: "410554788955704801",
@@ -871,16 +910,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "14841710862025530435222405874232",
       },
       pool: {
+        id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         token1: {
           id: "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
           decimals: "6",
+          symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110406942604219311187937492467171708429917490",
-        feeGrowthGlobal1X128: "140500404169410933591656145031393",
+        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
+        feeGrowthGlobal1X128: "140511792782193726920074558096223",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -920,16 +962,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "14841710862025530435222405874232",
       },
       pool: {
+        id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         token1: {
           id: "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
           decimals: "6",
+          symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110406942604219311187937492467171708429917490",
-        feeGrowthGlobal1X128: "140500404169410933591656145031393",
+        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
+        feeGrowthGlobal1X128: "140511792782193726920074558096223",
         feeTier: "3000",
       },
       liquidity: "379720218229698934",
@@ -969,16 +1014,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "11420438347271336456162485673248",
       },
       pool: {
+        id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         token1: {
           id: "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
           decimals: "6",
+          symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110406942604219311187937492467171708429917490",
-        feeGrowthGlobal1X128: "140500404169410933591656145031393",
+        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
+        feeGrowthGlobal1X128: "140511792782193726920074558096223",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -1018,16 +1066,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "11420438347271336456162485673248",
       },
       pool: {
+        id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         token1: {
           id: "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
           decimals: "6",
+          symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110406942604219311187937492467171708429917490",
-        feeGrowthGlobal1X128: "140500404169410933591656145031393",
+        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
+        feeGrowthGlobal1X128: "140511792782193726920074558096223",
         feeTier: "3000",
       },
       liquidity: "405497327429674481",
@@ -1068,16 +1119,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "30998197200682182858775439750741",
       },
       pool: {
+        id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         token1: {
           id: "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
           decimals: "6",
+          symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110406942604219311187937492467171708429917490",
-        feeGrowthGlobal1X128: "140500404169410933591656145031393",
+        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
+        feeGrowthGlobal1X128: "140511792782193726920074558096223",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -1118,16 +1172,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "30998197200682182858775439750741",
       },
       pool: {
+        id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         token1: {
           id: "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
           decimals: "6",
+          symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110406942604219311187937492467171708429917490",
-        feeGrowthGlobal1X128: "140500404169410933591656145031393",
+        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
+        feeGrowthGlobal1X128: "140511792782193726920074558096223",
         feeTier: "3000",
       },
       liquidity: "230531297507792096",
@@ -1167,16 +1224,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "21871844081104074139079718887694252375423",
       },
       pool: {
+        id: "0xb533c12fb4e7b53b5524eab9b47d93ff6c7a456f",
         token0: {
           id: "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
           decimals: "6",
+          symbol: "USDC",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
-        feeGrowthGlobal0X128: "4792279302228460419608214388676",
-        feeGrowthGlobal1X128: "2322209834277144679521593799710839229811432",
+        feeGrowthGlobal0X128: "4802056043583890450540019081055",
+        feeGrowthGlobal1X128: "2324845059115635360297355813329894655716658",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -1216,16 +1276,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "21871844081104074139079718887694252375423",
       },
       pool: {
+        id: "0xb533c12fb4e7b53b5524eab9b47d93ff6c7a456f",
         token0: {
           id: "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
           decimals: "6",
+          symbol: "USDC",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
-        feeGrowthGlobal0X128: "4792279302228460419608214388676",
-        feeGrowthGlobal1X128: "2322209834277144679521593799710839229811432",
+        feeGrowthGlobal0X128: "4802056043583890450540019081055",
+        feeGrowthGlobal1X128: "2324845059115635360297355813329894655716658",
         feeTier: "3000",
       },
       liquidity: "234450946086670431",
@@ -1265,16 +1328,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "21871844081104074139079718887694252375423",
       },
       pool: {
+        id: "0xb533c12fb4e7b53b5524eab9b47d93ff6c7a456f",
         token0: {
           id: "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
           decimals: "6",
+          symbol: "USDC",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
-        feeGrowthGlobal0X128: "4792279302228460419608214388676",
-        feeGrowthGlobal1X128: "2322209834277144679521593799710839229811432",
+        feeGrowthGlobal0X128: "4802056043583890450540019081055",
+        feeGrowthGlobal1X128: "2324845059115635360297355813329894655716658",
         feeTier: "3000",
       },
       liquidity: "234450946086670431",
@@ -1316,17 +1382,20 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "20818425316793860752616741646612416950",
       },
       pool: {
+        id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128:
-          "408629739974704797549300495653251864655271047528862",
-        feeGrowthGlobal1X128: "3745810559772651628650163408887550102983",
+          "408629739974704797635299124286772049322769815368739",
+        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -1368,17 +1437,20 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "20818425316793860752616741646612416950",
       },
       pool: {
+        id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128:
-          "408629739974704797549300495653251864655271047528862",
-        feeGrowthGlobal1X128: "3745810559772651628650163408887550102983",
+          "408629739974704797635299124286772049322769815368739",
+        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
         feeTier: "3000",
       },
       liquidity: "20107186381845810850347",
@@ -1420,17 +1492,20 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "68484604956227262272222628577197287112",
       },
       pool: {
+        id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128:
-          "408629739974704797549300495653251864655271047528862",
-        feeGrowthGlobal1X128: "3745810559772651628650163408887550102983",
+          "408629739974704797635299124286772049322769815368739",
+        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -1472,17 +1547,20 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "68484604956227262272222628577197287112",
       },
       pool: {
+        id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128:
-          "408629739974704797549300495653251864655271047528862",
-        feeGrowthGlobal1X128: "3745810559772651628650163408887550102983",
+          "408629739974704797635299124286772049322769815368739",
+        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
         feeTier: "3000",
       },
       liquidity: "6111640698378584863565",
@@ -1524,17 +1602,20 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "309916205140695282877416811618660889688",
       },
       pool: {
+        id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128:
-          "408629739974704797549300495653251864655271047528862",
-        feeGrowthGlobal1X128: "3745810559772651628650163408887550102983",
+          "408629739974704797635299124286772049322769815368739",
+        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -1576,17 +1657,20 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "309916205140695282877416811618660889688",
       },
       pool: {
+        id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128:
-          "408629739974704797549300495653251864655271047528862",
-        feeGrowthGlobal1X128: "3745810559772651628650163408887550102983",
+          "408629739974704797635299124286772049322769815368739",
+        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
         feeTier: "3000",
       },
       liquidity: "4705822808033483605445",
@@ -1628,17 +1712,20 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "309916205140695282877416811618660889688",
       },
       pool: {
+        id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128:
-          "408629739974704797549300495653251864655271047528862",
-        feeGrowthGlobal1X128: "3745810559772651628650163408887550102983",
+          "408629739974704797635299124286772049322769815368739",
+        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
         feeTier: "3000",
       },
       liquidity: "3712252541986093194592",
@@ -1679,17 +1766,20 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "753862371855518320276895483260335671933",
       },
       pool: {
+        id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128:
-          "408629739974704797549300495653251864655271047528862",
-        feeGrowthGlobal1X128: "3745810559772651628650163408887550102983",
+          "408629739974704797635299124286772049322769815368739",
+        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -1731,17 +1821,20 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "309916205140695282877416811618660889688",
       },
       pool: {
+        id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128:
-          "408629739974704797549300495653251864655271047528862",
-        feeGrowthGlobal1X128: "3745810559772651628650163408887550102983",
+          "408629739974704797635299124286772049322769815368739",
+        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
         feeTier: "3000",
       },
       liquidity: "3712252541986093194592",
@@ -1782,17 +1875,20 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "753862371855518320276895483260335671933",
       },
       pool: {
+        id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128:
-          "408629739974704797549300495653251864655271047528862",
-        feeGrowthGlobal1X128: "3745810559772651628650163408887550102983",
+          "408629739974704797635299124286772049322769815368739",
+        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
         feeTier: "3000",
       },
       liquidity: "599121183885301022157",
@@ -1832,17 +1928,20 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "91366872371517625208427285066211028181",
       },
       pool: {
+        id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128:
-          "408629739974704797549300495653251864655271047528862",
-        feeGrowthGlobal1X128: "3745810559772651628650163408887550102983",
+          "408629739974704797635299124286772049322769815368739",
+        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -1882,17 +1981,20 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "91366872371517625208427285066211028181",
       },
       pool: {
+        id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128:
-          "408629739974704797549300495653251864655271047528862",
-        feeGrowthGlobal1X128: "3745810559772651628650163408887550102983",
+          "408629739974704797635299124286772049322769815368739",
+        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
         feeTier: "3000",
       },
       liquidity: "1985281673336174951814",
@@ -1932,16 +2034,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "1546873979082020760600623202050300670302",
       },
       pool: {
+        id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369837226595652660960224044388548668787",
+        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
         feeTier: "10000",
       },
       liquidity: "0",
@@ -1982,17 +2087,20 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "753862371855518320276895483260335671933",
       },
       pool: {
+        id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128:
-          "408629739974704797549300495653251864655271047528862",
-        feeGrowthGlobal1X128: "3745810559772651628650163408887550102983",
+          "408629739974704797635299124286772049322769815368739",
+        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
         feeTier: "3000",
       },
       liquidity: "599121183885301022157",
@@ -2032,16 +2140,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "1546873979082020760600623202050300670302",
       },
       pool: {
+        id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369837226595652660960224044388548668787",
+        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
         feeTier: "10000",
       },
       liquidity: "2915438015516360715169",
@@ -2081,16 +2192,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "1546873979082020760600623202050300670302",
       },
       pool: {
+        id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369837226595652660960224044388548668787",
+        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
         feeTier: "10000",
       },
       liquidity: "2915438015516360715169",
@@ -2130,16 +2244,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "1546873979082020760600623202050300670302",
       },
       pool: {
+        id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369837226595652660960224044388548668787",
+        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
         feeTier: "10000",
       },
       liquidity: "1993994645087620286847",
@@ -2179,16 +2296,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "1447182889818007541419670566192385705703",
       },
       pool: {
+        id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369837226595652660960224044388548668787",
+        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
         feeTier: "10000",
       },
       liquidity: "0",
@@ -2228,16 +2348,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "1447182889818007541419670566192385705703",
       },
       pool: {
+        id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369837226595652660960224044388548668787",
+        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
         feeTier: "10000",
       },
       liquidity: "1807570232766567045945",
@@ -2277,16 +2400,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "1447182889818007541419670566192385705703",
       },
       pool: {
+        id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369837226595652660960224044388548668787",
+        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
         feeTier: "10000",
       },
       liquidity: "1675106390021065300984",
@@ -2326,16 +2452,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "1546873979082020760600623202050300670302",
       },
       pool: {
+        id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369837226595652660960224044388548668787",
+        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
         feeTier: "10000",
       },
       liquidity: "614469663976146131537",
@@ -2375,16 +2504,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "1447182889818007541419670566192385705703",
       },
       pool: {
+        id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369837226595652660960224044388548668787",
+        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
         feeTier: "10000",
       },
       liquidity: "1675106390021065300984",
@@ -2424,16 +2556,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "0",
       },
       pool: {
+        id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369837226595652660960224044388548668787",
+        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
         feeTier: "10000",
       },
       liquidity: "0",
@@ -2473,16 +2608,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "1546873979082020760600623202050300670302",
       },
       pool: {
+        id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369837226595652660960224044388548668787",
+        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
         feeTier: "10000",
       },
       liquidity: "614469663976146131537",
@@ -2522,16 +2660,19 @@ const _getPositionSnapshotsForAddress = async (
         feeGrowthInside1LastX128: "0",
       },
       pool: {
+        id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369837226595652660960224044388548668787",
+        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
         feeTier: "10000",
       },
       liquidity: "377285160759165397460405",
@@ -2573,16 +2714,19 @@ const _getPositionSnapshotsForAddress = async (
           "115792089237316195423570985008687907852881755794119849212374048634050494682765",
       },
       pool: {
+        id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369837226595652660960224044388548668787",
+        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
         feeTier: "10000",
       },
       liquidity: "0",
@@ -2624,16 +2768,19 @@ const _getPositionSnapshotsForAddress = async (
           "115792089237316195423570985008687907852881755794119849212374048634050494682765",
       },
       pool: {
+        id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
+          symbol: "WETH",
         },
         token1: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
+          symbol: "OP",
         },
         feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369837226595652660960224044388548668787",
+        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
         feeTier: "10000",
       },
       liquidity: "455228734519025101210",
@@ -2658,7 +2805,6 @@ const _getPositionSnapshotsForAddress = async (
       },
     },
   ] as unknown as PositionSnapshot[];
-
   try {
     const res = await _queryUniswap(`{
         positionSnapshots(
@@ -2688,10 +2834,12 @@ const _getPositionSnapshotsForAddress = async (
             token0{
               id
               decimals
+              symbol 
             }
             token1{
               id
               decimals
+              symbol
             }
             feeGrowthGlobal0X128
             feeGrowthGlobal1X128
@@ -2768,7 +2916,9 @@ export const getPositionSnapshots = async (
         poolId: p.pool.id,
         feeTier: p.pool.feeTier,
         tokenID0: p.pool.token0.id,
+        tokenSymbol0: p.pool.token0.symbol,
         tokenID1: p.pool.token1.id,
+        tokenSymbol1: p.pool.token1.symbol,
         openToken0Price: price0,
         openToken1Price: price1,
         opening: true,
