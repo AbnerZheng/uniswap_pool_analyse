@@ -438,7 +438,7 @@ export const LPHistoryTable = ({
       render: (_, record) => {
         return (
           <Popover
-            placement="right"
+            placement="top"
             color="rgba(0,0,0,0.875)"
             content={
               <div>
@@ -545,7 +545,7 @@ export const LPHistoryTable = ({
       render: (_, record) => {
         return (
           <Popover
-            placement="right"
+            placement="top"
             color="rgba(0,0,0,0.875)"
             content={
               <div>
