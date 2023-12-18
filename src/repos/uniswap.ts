@@ -225,16 +225,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "-269520",
           feeGrowthOutside0X128: "97659080377574330727063353409307104894375717",
+          feeGrowthOutside1X128: "109446830955371837960806023661776",
         },
         tickUpper: {
           tickIdx: "-267900",
           feeGrowthOutside0X128: "6887400986990535049638647301859525104147057",
+          feeGrowthOutside1X128: "18295008967088563428348690420361",
         },
         feeGrowthInside0LastX128: "5643232589123202072279476202331375214447141",
         feeGrowthInside1LastX128: "12368049913285458580200978499547",
       },
       pool: {
         id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
+        tick: "-268916",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
@@ -245,8 +248,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "6",
           symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
-        feeGrowthGlobal1X128: "140511792782193726920074558096223",
+        token0Price: "0.4767070351780169021227311081379257",
+        token1Price: "2.097724443329370192934901636483631",
+        feeGrowthGlobal0X128: "110458556355789004488081714831520795328780702",
+        feeGrowthGlobal1X128: "140618988255993403693728023219986",
         feeTier: "3000",
       },
       liquidity: "199486544038781090",
@@ -277,16 +282,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "-268440",
           feeGrowthOutside0X128: "9354102241694890923577159749819144773639176",
+          feeGrowthOutside1X128: "23865013436040130470534586442119",
         },
         tickUpper: {
           tickIdx: "-267300",
           feeGrowthOutside0X128: "4923543797226838347637301965437811442105092",
+          feeGrowthOutside1X128: "13600155101228990438336782809795",
         },
         feeGrowthInside0LastX128: "4338909725714742598270584242967803989973862",
         feeGrowthInside1LastX128: "10090534199099423670173383523032",
       },
       pool: {
         id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
+        tick: "-268916",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
@@ -297,8 +305,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "6",
           symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
-        feeGrowthGlobal1X128: "140511792782193726920074558096223",
+        token0Price: "0.4767070351780169021227311081379257",
+        token1Price: "2.097724443329370192934901636483631",
+        feeGrowthGlobal0X128: "110458556355789004488081714831520795328780702",
+        feeGrowthGlobal1X128: "140618988255993403693728023219986",
         feeTier: "3000",
       },
       liquidity: "626275517193904256",
@@ -329,16 +339,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "265320",
           feeGrowthOutside0X128: "4356313144828416318711169453061",
+          feeGrowthOutside1X128: "2105436331253473579907716727928387479622590",
         },
         tickUpper: {
           tickIdx: "268140",
           feeGrowthOutside0X128: "4528192237599538307462233820173",
+          feeGrowthOutside1X128: "2175042404544076482316494230881714328863161",
         },
         feeGrowthInside0LastX128: "111142015412996182645142280146",
         feeGrowthInside1LastX128: "35437031951076198355058764067099500059731",
       },
       pool: {
         id: "0xb533c12fb4e7b53b5524eab9b47d93ff6c7a456f",
+        tick: "268915",
         token0: {
           id: "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
           decimals: "6",
@@ -349,8 +362,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
-        feeGrowthGlobal0X128: "4802056043583890450540019081055",
-        feeGrowthGlobal1X128: "2324845059115635360297355813329894655716658",
+        token0Price: "2.097637060137120585211826527686526",
+        token1Price: "0.4767268938005085252144896768540869",
+        feeGrowthGlobal0X128: "4911265345053423289682004171230",
+        feeGrowthGlobal1X128: "2374663261432591786607559595039330926496159",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -380,17 +395,20 @@ const _getPositionSnapshotsForAddress = async (
         liquidity: "0",
         tickLower: {
           tickIdx: "-269040",
-          feeGrowthOutside0X128: "98629160073449301291825953445043993941966866",
+          feeGrowthOutside0X128: "98632477018163561519205029864985360916851601",
+          feeGrowthOutside1X128: "111450175595849359370745877919246",
         },
         tickUpper: {
           tickIdx: "-267720",
           feeGrowthOutside0X128: "6292782652669986343141821338883428632074344",
+          feeGrowthOutside1X128: "16901703041441024417707929541191",
         },
         feeGrowthInside0LastX128: "5268437890732212587632038813594590070226490",
         feeGrowthInside1LastX128: "11758501373664996579834465366520",
       },
       pool: {
         id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
+        tick: "-268916",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
@@ -401,8 +419,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "6",
           symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
-        feeGrowthGlobal1X128: "140511792782193726920074558096223",
+        token0Price: "0.4767070351780169021227311081379257",
+        token1Price: "2.097724443329370192934901636483631",
+        feeGrowthGlobal0X128: "110458556355789004488081714831520795328780702",
+        feeGrowthGlobal1X128: "140618988255993403693728023219986",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -433,16 +453,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "265320",
           feeGrowthOutside0X128: "4356313144828416318711169453061",
+          feeGrowthOutside1X128: "2105436331253473579907716727928387479622590",
         },
         tickUpper: {
           tickIdx: "268140",
           feeGrowthOutside0X128: "4528192237599538307462233820173",
+          feeGrowthOutside1X128: "2175042404544076482316494230881714328863161",
         },
         feeGrowthInside0LastX128: "111142015412996182645142280146",
         feeGrowthInside1LastX128: "35437031951076198355058764067099500059731",
       },
       pool: {
         id: "0xb533c12fb4e7b53b5524eab9b47d93ff6c7a456f",
+        tick: "268915",
         token0: {
           id: "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
           decimals: "6",
@@ -453,8 +476,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
-        feeGrowthGlobal0X128: "4802056043583890450540019081055",
-        feeGrowthGlobal1X128: "2324845059115635360297355813329894655716658",
+        token0Price: "2.097637060137120585211826527686526",
+        token1Price: "0.4767268938005085252144896768540869",
+        feeGrowthGlobal0X128: "4911265345053423289682004171230",
+        feeGrowthGlobal1X128: "2374663261432591786607559595039330926496159",
         feeTier: "3000",
       },
       liquidity: "109120458735762569",
@@ -485,16 +510,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "267180",
           feeGrowthOutside0X128: "1017255188800192948153790421349",
+          feeGrowthOutside1X128: "442904464805938857537514112955229527946899",
         },
         tickUpper: {
           tickIdx: "268140",
           feeGrowthOutside0X128: "4528192237599538307462233820173",
+          feeGrowthOutside1X128: "2175042404544076482316494230881714328863161",
         },
         feeGrowthInside0LastX128: "3440143665199497089141391079172",
         feeGrowthInside1LastX128: "1696706126469403660587927266465106580755598",
       },
       pool: {
         id: "0xb533c12fb4e7b53b5524eab9b47d93ff6c7a456f",
+        tick: "268915",
         token0: {
           id: "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
           decimals: "6",
@@ -505,8 +533,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
-        feeGrowthGlobal0X128: "4802056043583890450540019081055",
-        feeGrowthGlobal1X128: "2324845059115635360297355813329894655716658",
+        token0Price: "2.097637060137120585211826527686526",
+        token1Price: "0.4767268938005085252144896768540869",
+        feeGrowthGlobal0X128: "4911265345053423289682004171230",
+        feeGrowthGlobal1X128: "2374663261432591786607559595039330926496159",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -537,16 +567,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "267180",
           feeGrowthOutside0X128: "1017255188800192948153790421349",
+          feeGrowthOutside1X128: "442904464805938857537514112955229527946899",
         },
         tickUpper: {
           tickIdx: "268140",
           feeGrowthOutside0X128: "4528192237599538307462233820173",
+          feeGrowthOutside1X128: "2175042404544076482316494230881714328863161",
         },
         feeGrowthInside0LastX128: "3440143665199497089141391079172",
         feeGrowthInside1LastX128: "1696706126469403660587927266465106580755598",
       },
       pool: {
         id: "0xb533c12fb4e7b53b5524eab9b47d93ff6c7a456f",
+        tick: "268915",
         token0: {
           id: "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
           decimals: "6",
@@ -557,8 +590,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
-        feeGrowthGlobal0X128: "4802056043583890450540019081055",
-        feeGrowthGlobal1X128: "2324845059115635360297355813329894655716658",
+        token0Price: "2.097637060137120585211826527686526",
+        token1Price: "0.4767268938005085252144896768540869",
+        feeGrowthGlobal0X128: "4911265345053423289682004171230",
+        feeGrowthGlobal1X128: "2374663261432591786607559595039330926496159",
         feeTier: "3000",
       },
       liquidity: "306202230851639373",
@@ -588,17 +623,20 @@ const _getPositionSnapshotsForAddress = async (
         liquidity: "0",
         tickLower: {
           tickIdx: "-269040",
-          feeGrowthOutside0X128: "98629160073449301291825953445043993941966866",
+          feeGrowthOutside0X128: "98632477018163561519205029864985360916851601",
+          feeGrowthOutside1X128: "111450175595849359370745877919246",
         },
         tickUpper: {
           tickIdx: "-267720",
           feeGrowthOutside0X128: "6292782652669986343141821338883428632074344",
+          feeGrowthOutside1X128: "16901703041441024417707929541191",
         },
         feeGrowthInside0LastX128: "5268437890732212587632038813594590070226490",
         feeGrowthInside1LastX128: "11758501373664996579834465366520",
       },
       pool: {
         id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
+        tick: "-268916",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
@@ -609,8 +647,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "6",
           symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
-        feeGrowthGlobal1X128: "140511792782193726920074558096223",
+        token0Price: "0.4767070351780169021227311081379257",
+        token1Price: "2.097724443329370192934901636483631",
+        feeGrowthGlobal0X128: "110458556355789004488081714831520795328780702",
+        feeGrowthGlobal1X128: "140618988255993403693728023219986",
         feeTier: "3000",
       },
       liquidity: "569965692747744913",
@@ -641,16 +681,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "-269580",
           feeGrowthOutside0X128: "97512415140610397767868585936853329547896436",
+          feeGrowthOutside1X128: "109153794838807023531473999466924",
         },
         tickUpper: {
           tickIdx: "-267420",
           feeGrowthOutside0X128: "5253312205877815581268516331128076551110738",
+          feeGrowthOutside1X128: "14408044789045792307757584029087",
         },
         feeGrowthInside0LastX128: "7421614993588972841794940035814890969410303",
         feeGrowthInside1LastX128: "16522968113947081003321441572622",
       },
       pool: {
         id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
+        tick: "-268916",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
@@ -661,8 +704,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "6",
           symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
-        feeGrowthGlobal1X128: "140511792782193726920074558096223",
+        token0Price: "0.4767070351780169021227311081379257",
+        token1Price: "2.097724443329370192934901636483631",
+        feeGrowthGlobal0X128: "110458556355789004488081714831520795328780702",
+        feeGrowthGlobal1X128: "140618988255993403693728023219986",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -693,16 +738,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "-269580",
           feeGrowthOutside0X128: "97512415140610397767868585936853329547896436",
+          feeGrowthOutside1X128: "109153794838807023531473999466924",
         },
         tickUpper: {
           tickIdx: "-267420",
           feeGrowthOutside0X128: "5253312205877815581268516331128076551110738",
+          feeGrowthOutside1X128: "14408044789045792307757584029087",
         },
         feeGrowthInside0LastX128: "7421614993588972841794940035814890969410303",
         feeGrowthInside1LastX128: "16522968113947081003321441572622",
       },
       pool: {
         id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
+        tick: "-268916",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
@@ -713,8 +761,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "6",
           symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
-        feeGrowthGlobal1X128: "140511792782193726920074558096223",
+        token0Price: "0.4767070351780169021227311081379257",
+        token1Price: "2.097724443329370192934901636483631",
+        feeGrowthGlobal0X128: "110458556355789004488081714831520795328780702",
+        feeGrowthGlobal1X128: "140618988255993403693728023219986",
         feeTier: "3000",
       },
       liquidity: "355627396701729442",
@@ -745,16 +795,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "-269580",
           feeGrowthOutside0X128: "97512415140610397767868585936853329547896436",
+          feeGrowthOutside1X128: "109153794838807023531473999466924",
         },
         tickUpper: {
           tickIdx: "-267420",
           feeGrowthOutside0X128: "5253312205877815581268516331128076551110738",
+          feeGrowthOutside1X128: "14408044789045792307757584029087",
         },
         feeGrowthInside0LastX128: "7421614993588972841794940035814890969410303",
         feeGrowthInside1LastX128: "16522968113947081003321441572622",
       },
       pool: {
         id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
+        tick: "-268916",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
@@ -765,8 +818,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "6",
           symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
-        feeGrowthGlobal1X128: "140511792782193726920074558096223",
+        token0Price: "0.4767070351780169021227311081379257",
+        token1Price: "2.097724443329370192934901636483631",
+        feeGrowthGlobal0X128: "110458556355789004488081714831520795328780702",
+        feeGrowthGlobal1X128: "140618988255993403693728023219986",
         feeTier: "3000",
       },
       liquidity: "334631650493231077",
@@ -797,16 +852,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "-269400",
           feeGrowthOutside0X128: "97015236938208912294822854705650988263588598",
+          feeGrowthOutside1X128: "107994748701129835912173705645728",
         },
         tickUpper: {
           tickIdx: "-267240",
           feeGrowthOutside0X128: "4789376626727260196233929388308039891724365",
+          feeGrowthOutside1X128: "13268376044293131978706514250175",
         },
         feeGrowthInside0LastX128: "8199285904243227631523814348284145425250957",
         feeGrowthInside1LastX128: "18420941968735313497860763092822",
       },
       pool: {
         id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
+        tick: "-268916",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
@@ -817,8 +875,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "6",
           symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
-        feeGrowthGlobal1X128: "140511792782193726920074558096223",
+        token0Price: "0.4767070351780169021227311081379257",
+        token1Price: "2.097724443329370192934901636483631",
+        feeGrowthGlobal0X128: "110458556355789004488081714831520795328780702",
+        feeGrowthGlobal1X128: "140618988255993403693728023219986",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -849,16 +909,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "-269400",
           feeGrowthOutside0X128: "97015236938208912294822854705650988263588598",
+          feeGrowthOutside1X128: "107994748701129835912173705645728",
         },
         tickUpper: {
           tickIdx: "-267240",
           feeGrowthOutside0X128: "4789376626727260196233929388308039891724365",
+          feeGrowthOutside1X128: "13268376044293131978706514250175",
         },
         feeGrowthInside0LastX128: "8199285904243227631523814348284145425250957",
         feeGrowthInside1LastX128: "18420941968735313497860763092822",
       },
       pool: {
         id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
+        tick: "-268916",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
@@ -869,8 +932,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "6",
           symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
-        feeGrowthGlobal1X128: "140511792782193726920074558096223",
+        token0Price: "0.4767070351780169021227311081379257",
+        token1Price: "2.097724443329370192934901636483631",
+        feeGrowthGlobal0X128: "110458556355789004488081714831520795328780702",
+        feeGrowthGlobal1X128: "140618988255993403693728023219986",
         feeTier: "3000",
       },
       liquidity: "410554788955704801",
@@ -901,16 +966,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "-269640",
           feeGrowthOutside0X128: "97382902761033628961683050485430855070866248",
+          feeGrowthOutside1X128: "108896032090656048980930876449807",
         },
         tickUpper: {
           tickIdx: "-267600",
           feeGrowthOutside0X128: "5857423954474616291803616136318794019619390",
+          feeGrowthOutside1X128: "15866105165246770100846678699442",
         },
         feeGrowthInside0LastX128: "6713854383695031243332480282100922746161706",
         feeGrowthInside1LastX128: "14841710862025530435222405874232",
       },
       pool: {
         id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
+        tick: "-268916",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
@@ -921,8 +989,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "6",
           symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
-        feeGrowthGlobal1X128: "140511792782193726920074558096223",
+        token0Price: "0.4767070351780169021227311081379257",
+        token1Price: "2.097724443329370192934901636483631",
+        feeGrowthGlobal0X128: "110458556355789004488081714831520795328780702",
+        feeGrowthGlobal1X128: "140618988255993403693728023219986",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -953,16 +1023,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "-269640",
           feeGrowthOutside0X128: "97382902761033628961683050485430855070866248",
+          feeGrowthOutside1X128: "108896032090656048980930876449807",
         },
         tickUpper: {
           tickIdx: "-267600",
           feeGrowthOutside0X128: "5857423954474616291803616136318794019619390",
+          feeGrowthOutside1X128: "15866105165246770100846678699442",
         },
         feeGrowthInside0LastX128: "6713854383695031243332480282100922746161706",
         feeGrowthInside1LastX128: "14841710862025530435222405874232",
       },
       pool: {
         id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
+        tick: "-268916",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
@@ -973,8 +1046,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "6",
           symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
-        feeGrowthGlobal1X128: "140511792782193726920074558096223",
+        token0Price: "0.4767070351780169021227311081379257",
+        token1Price: "2.097724443329370192934901636483631",
+        feeGrowthGlobal0X128: "110458556355789004488081714831520795328780702",
+        feeGrowthGlobal1X128: "140618988255993403693728023219986",
         feeTier: "3000",
       },
       liquidity: "379720218229698934",
@@ -1005,16 +1080,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "-270180",
           feeGrowthOutside0X128: "96067107895846017410811966033734894546627888",
+          feeGrowthOutside1X128: "106361177154451887133077796171562",
         },
         tickUpper: {
           tickIdx: "-268260",
           feeGrowthOutside0X128: "8507452238138188987586590483269775211274735",
+          feeGrowthOutside1X128: "21985103940796362426386461148408",
         },
         feeGrowthInside0LastX128: "5494230461402689122367267531175307308321941",
         feeGrowthInside1LastX128: "11420438347271336456162485673248",
       },
       pool: {
         id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
+        tick: "-268916",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
@@ -1025,8 +1103,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "6",
           symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
-        feeGrowthGlobal1X128: "140511792782193726920074558096223",
+        token0Price: "0.4767070351780169021227311081379257",
+        token1Price: "2.097724443329370192934901636483631",
+        feeGrowthGlobal0X128: "110458556355789004488081714831520795328780702",
+        feeGrowthGlobal1X128: "140618988255993403693728023219986",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -1057,16 +1137,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "-270180",
           feeGrowthOutside0X128: "96067107895846017410811966033734894546627888",
+          feeGrowthOutside1X128: "106361177154451887133077796171562",
         },
         tickUpper: {
           tickIdx: "-268260",
           feeGrowthOutside0X128: "8507452238138188987586590483269775211274735",
+          feeGrowthOutside1X128: "21985103940796362426386461148408",
         },
         feeGrowthInside0LastX128: "5494230461402689122367267531175307308321941",
         feeGrowthInside1LastX128: "11420438347271336456162485673248",
       },
       pool: {
         id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
+        tick: "-268916",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
@@ -1077,8 +1160,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "6",
           symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
-        feeGrowthGlobal1X128: "140511792782193726920074558096223",
+        token0Price: "0.4767070351780169021227311081379257",
+        token1Price: "2.097724443329370192934901636483631",
+        feeGrowthGlobal0X128: "110458556355789004488081714831520795328780702",
+        feeGrowthGlobal1X128: "140618988255993403693728023219986",
         feeTier: "3000",
       },
       liquidity: "405497327429674481",
@@ -1109,10 +1194,12 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "-271320",
           feeGrowthOutside0X128: "85234273132305345218740421247929589105298122",
+          feeGrowthOutside1X128: "86393131327324552573768146100639",
         },
         tickUpper: {
           tickIdx: "-268260",
           feeGrowthOutside0X128: "8507452238138188987586590483269775211274735",
+          feeGrowthOutside1X128: "21985103940796362426386461148408",
         },
         feeGrowthInside0LastX128:
           "16132083931697970755934577573736752447238618",
@@ -1120,6 +1207,7 @@ const _getPositionSnapshotsForAddress = async (
       },
       pool: {
         id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
+        tick: "-268916",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
@@ -1130,8 +1218,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "6",
           symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
-        feeGrowthGlobal1X128: "140511792782193726920074558096223",
+        token0Price: "0.4767070351780169021227311081379257",
+        token1Price: "2.097724443329370192934901636483631",
+        feeGrowthGlobal0X128: "110458556355789004488081714831520795328780702",
+        feeGrowthGlobal1X128: "140618988255993403693728023219986",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -1162,10 +1252,12 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "-271320",
           feeGrowthOutside0X128: "85234273132305345218740421247929589105298122",
+          feeGrowthOutside1X128: "86393131327324552573768146100639",
         },
         tickUpper: {
           tickIdx: "-268260",
           feeGrowthOutside0X128: "8507452238138188987586590483269775211274735",
+          feeGrowthOutside1X128: "21985103940796362426386461148408",
         },
         feeGrowthInside0LastX128:
           "16132083931697970755934577573736752447238618",
@@ -1173,6 +1265,7 @@ const _getPositionSnapshotsForAddress = async (
       },
       pool: {
         id: "0x1c3140ab59d6caf9fa7459c6f83d4b52ba881d36",
+        tick: "-268916",
         token0: {
           id: "0x4200000000000000000000000000000000000042",
           decimals: "18",
@@ -1183,8 +1276,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "6",
           symbol: "USDC",
         },
-        feeGrowthGlobal0X128: "110409882945219268608691400695176579201638953",
-        feeGrowthGlobal1X128: "140511792782193726920074558096223",
+        token0Price: "0.4767070351780169021227311081379257",
+        token1Price: "2.097724443329370192934901636483631",
+        feeGrowthGlobal0X128: "110458556355789004488081714831520795328780702",
+        feeGrowthGlobal1X128: "140618988255993403693728023219986",
         feeTier: "3000",
       },
       liquidity: "230531297507792096",
@@ -1215,16 +1310,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "268380",
           feeGrowthOutside0X128: "4497278845743813637745172625649",
+          feeGrowthOutside1X128: "2162702319571970513003836573181278076526037",
         },
         tickUpper: {
           tickIdx: "271320",
           feeGrowthOutside0X128: "0",
+          feeGrowthOutside1X128: "0",
         },
         feeGrowthInside0LastX128: "35644743059363458746418649525",
         feeGrowthInside1LastX128: "21871844081104074139079718887694252375423",
       },
       pool: {
         id: "0xb533c12fb4e7b53b5524eab9b47d93ff6c7a456f",
+        tick: "268915",
         token0: {
           id: "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
           decimals: "6",
@@ -1235,8 +1333,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
-        feeGrowthGlobal0X128: "4802056043583890450540019081055",
-        feeGrowthGlobal1X128: "2324845059115635360297355813329894655716658",
+        token0Price: "2.097637060137120585211826527686526",
+        token1Price: "0.4767268938005085252144896768540869",
+        feeGrowthGlobal0X128: "4911265345053423289682004171230",
+        feeGrowthGlobal1X128: "2374663261432591786607559595039330926496159",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -1267,16 +1367,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "268380",
           feeGrowthOutside0X128: "4497278845743813637745172625649",
+          feeGrowthOutside1X128: "2162702319571970513003836573181278076526037",
         },
         tickUpper: {
           tickIdx: "271320",
           feeGrowthOutside0X128: "0",
+          feeGrowthOutside1X128: "0",
         },
         feeGrowthInside0LastX128: "35644743059363458746418649525",
         feeGrowthInside1LastX128: "21871844081104074139079718887694252375423",
       },
       pool: {
         id: "0xb533c12fb4e7b53b5524eab9b47d93ff6c7a456f",
+        tick: "268915",
         token0: {
           id: "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
           decimals: "6",
@@ -1287,8 +1390,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
-        feeGrowthGlobal0X128: "4802056043583890450540019081055",
-        feeGrowthGlobal1X128: "2324845059115635360297355813329894655716658",
+        token0Price: "2.097637060137120585211826527686526",
+        token1Price: "0.4767268938005085252144896768540869",
+        feeGrowthGlobal0X128: "4911265345053423289682004171230",
+        feeGrowthGlobal1X128: "2374663261432591786607559595039330926496159",
         feeTier: "3000",
       },
       liquidity: "234450946086670431",
@@ -1319,16 +1424,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "268380",
           feeGrowthOutside0X128: "4497278845743813637745172625649",
+          feeGrowthOutside1X128: "2162702319571970513003836573181278076526037",
         },
         tickUpper: {
           tickIdx: "271320",
           feeGrowthOutside0X128: "0",
+          feeGrowthOutside1X128: "0",
         },
         feeGrowthInside0LastX128: "35644743059363458746418649525",
         feeGrowthInside1LastX128: "21871844081104074139079718887694252375423",
       },
       pool: {
         id: "0xb533c12fb4e7b53b5524eab9b47d93ff6c7a456f",
+        tick: "268915",
         token0: {
           id: "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
           decimals: "6",
@@ -1339,8 +1447,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
-        feeGrowthGlobal0X128: "4802056043583890450540019081055",
-        feeGrowthGlobal1X128: "2324845059115635360297355813329894655716658",
+        token0Price: "2.097637060137120585211826527686526",
+        token1Price: "0.4767268938005085252144896768540869",
+        feeGrowthGlobal0X128: "4911265345053423289682004171230",
+        feeGrowthGlobal1X128: "2374663261432591786607559595039330926496159",
         feeTier: "3000",
       },
       liquidity: "234450946086670431",
@@ -1372,17 +1482,20 @@ const _getPositionSnapshotsForAddress = async (
           tickIdx: "67200",
           feeGrowthOutside0X128:
             "408629739974703417445891071153119285938168722660724",
+          feeGrowthOutside1X128: "1809967025926295024205395355453161237376",
         },
         tickUpper: {
           tickIdx: "67680",
           feeGrowthOutside0X128:
             "408629739974703466588226493864731292358538363987586",
+          feeGrowthOutside1X128: "1852622289888607760647035866223489042223",
         },
         feeGrowthInside0LastX128: "23344741361185172839499345358952778",
         feeGrowthInside1LastX128: "20818425316793860752616741646612416950",
       },
       pool: {
         id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
+        tick: "69423",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -1393,9 +1506,11 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
+        token0Price: "0.000966326963647630480782512713203616",
+        token1Price: "1034.846421158799761989942397114447",
         feeGrowthGlobal0X128:
-          "408629739974704797635299124286772049322769815368739",
-        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
+          "408629739974704799282415578221416210531058353027489",
+        feeGrowthGlobal1X128: "3747128717085834861914862651737277967686",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -1427,17 +1542,20 @@ const _getPositionSnapshotsForAddress = async (
           tickIdx: "67200",
           feeGrowthOutside0X128:
             "408629739974703417445891071153119285938168722660724",
+          feeGrowthOutside1X128: "1809967025926295024205395355453161237376",
         },
         tickUpper: {
           tickIdx: "67680",
           feeGrowthOutside0X128:
             "408629739974703466588226493864731292358538363987586",
+          feeGrowthOutside1X128: "1852622289888607760647035866223489042223",
         },
         feeGrowthInside0LastX128: "23344741361185172839499345358952778",
         feeGrowthInside1LastX128: "20818425316793860752616741646612416950",
       },
       pool: {
         id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
+        tick: "69423",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -1448,9 +1566,11 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
+        token0Price: "0.000966326963647630480782512713203616",
+        token1Price: "1034.846421158799761989942397114447",
         feeGrowthGlobal0X128:
-          "408629739974704797635299124286772049322769815368739",
-        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
+          "408629739974704799282415578221416210531058353027489",
+        feeGrowthGlobal1X128: "3747128717085834861914862651737277967686",
         feeTier: "3000",
       },
       liquidity: "20107186381845810850347",
@@ -1482,17 +1602,20 @@ const _getPositionSnapshotsForAddress = async (
           tickIdx: "66000",
           feeGrowthOutside0X128:
             "408629739974703407574661515380322380966828048299313",
+          feeGrowthOutside1X128: "1861066904232096279657847628252385133680",
         },
         tickUpper: {
           tickIdx: "67620",
           feeGrowthOutside0X128:
             "408629739974703566262016312389300910236159892872235",
+          feeGrowthOutside1X128: "2004129053934637169959908281715520614325",
         },
         feeGrowthInside0LastX128: "65006606381568075320765220247076021",
         feeGrowthInside1LastX128: "68484604956227262272222628577197287112",
       },
       pool: {
         id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
+        tick: "69423",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -1503,9 +1626,11 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
+        token0Price: "0.000966326963647630480782512713203616",
+        token1Price: "1034.846421158799761989942397114447",
         feeGrowthGlobal0X128:
-          "408629739974704797635299124286772049322769815368739",
-        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
+          "408629739974704799282415578221416210531058353027489",
+        feeGrowthGlobal1X128: "3747128717085834861914862651737277967686",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -1537,17 +1662,20 @@ const _getPositionSnapshotsForAddress = async (
           tickIdx: "66000",
           feeGrowthOutside0X128:
             "408629739974703407574661515380322380966828048299313",
+          feeGrowthOutside1X128: "1861066904232096279657847628252385133680",
         },
         tickUpper: {
           tickIdx: "67620",
           feeGrowthOutside0X128:
             "408629739974703566262016312389300910236159892872235",
+          feeGrowthOutside1X128: "2004129053934637169959908281715520614325",
         },
         feeGrowthInside0LastX128: "65006606381568075320765220247076021",
         feeGrowthInside1LastX128: "68484604956227262272222628577197287112",
       },
       pool: {
         id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
+        tick: "69423",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -1558,9 +1686,11 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
+        token0Price: "0.000966326963647630480782512713203616",
+        token1Price: "1034.846421158799761989942397114447",
         feeGrowthGlobal0X128:
-          "408629739974704797635299124286772049322769815368739",
-        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
+          "408629739974704799282415578221416210531058353027489",
+        feeGrowthGlobal1X128: "3747128717085834861914862651737277967686",
         feeTier: "3000",
       },
       liquidity: "6111640698378584863565",
@@ -1592,17 +1722,20 @@ const _getPositionSnapshotsForAddress = async (
           tickIdx: "66360",
           feeGrowthOutside0X128:
             "408629739974703298383037740408488065112564896897994",
+          feeGrowthOutside1X128: "1698037993107335849754537905867751134422",
         },
         tickUpper: {
           tickIdx: "68280",
           feeGrowthOutside0X128:
             "408629739974703667848329485234641941454625510964293",
+          feeGrowthOutside1X128: "2109698239162882263300726004055637944447",
         },
         feeGrowthInside0LastX128: "249743276130140378235555080723146476",
         feeGrowthInside1LastX128: "309916205140695282877416811618660889688",
       },
       pool: {
         id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
+        tick: "69423",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -1613,9 +1746,11 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
+        token0Price: "0.000966326963647630480782512713203616",
+        token1Price: "1034.846421158799761989942397114447",
         feeGrowthGlobal0X128:
-          "408629739974704797635299124286772049322769815368739",
-        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
+          "408629739974704799282415578221416210531058353027489",
+        feeGrowthGlobal1X128: "3747128717085834861914862651737277967686",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -1647,17 +1782,20 @@ const _getPositionSnapshotsForAddress = async (
           tickIdx: "66360",
           feeGrowthOutside0X128:
             "408629739974703298383037740408488065112564896897994",
+          feeGrowthOutside1X128: "1698037993107335849754537905867751134422",
         },
         tickUpper: {
           tickIdx: "68280",
           feeGrowthOutside0X128:
             "408629739974703667848329485234641941454625510964293",
+          feeGrowthOutside1X128: "2109698239162882263300726004055637944447",
         },
         feeGrowthInside0LastX128: "249743276130140378235555080723146476",
         feeGrowthInside1LastX128: "309916205140695282877416811618660889688",
       },
       pool: {
         id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
+        tick: "69423",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -1668,9 +1806,11 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
+        token0Price: "0.000966326963647630480782512713203616",
+        token1Price: "1034.846421158799761989942397114447",
         feeGrowthGlobal0X128:
-          "408629739974704797635299124286772049322769815368739",
-        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
+          "408629739974704799282415578221416210531058353027489",
+        feeGrowthGlobal1X128: "3747128717085834861914862651737277967686",
         feeTier: "3000",
       },
       liquidity: "4705822808033483605445",
@@ -1702,17 +1842,20 @@ const _getPositionSnapshotsForAddress = async (
           tickIdx: "66360",
           feeGrowthOutside0X128:
             "408629739974703298383037740408488065112564896897994",
+          feeGrowthOutside1X128: "1698037993107335849754537905867751134422",
         },
         tickUpper: {
           tickIdx: "68280",
           feeGrowthOutside0X128:
             "408629739974703667848329485234641941454625510964293",
+          feeGrowthOutside1X128: "2109698239162882263300726004055637944447",
         },
         feeGrowthInside0LastX128: "249743276130140378235555080723146476",
         feeGrowthInside1LastX128: "309916205140695282877416811618660889688",
       },
       pool: {
         id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
+        tick: "69423",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -1723,9 +1866,11 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
+        token0Price: "0.000966326963647630480782512713203616",
+        token1Price: "1034.846421158799761989942397114447",
         feeGrowthGlobal0X128:
-          "408629739974704797635299124286772049322769815368739",
-        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
+          "408629739974704799282415578221416210531058353027489",
+        feeGrowthGlobal1X128: "3747128717085834861914862651737277967686",
         feeTier: "3000",
       },
       liquidity: "3712252541986093194592",
@@ -1757,16 +1902,19 @@ const _getPositionSnapshotsForAddress = async (
           tickIdx: "65520",
           feeGrowthOutside0X128:
             "408629739974702823007235012000956142142776858467753",
+          feeGrowthOutside1X128: "1058654819648446989737672599631186711228",
         },
         tickUpper: {
           tickIdx: "70380",
           feeGrowthOutside0X128: "1055042087802644146496982455315945340",
+          feeGrowthOutside1X128: "1618991476597305352562099540154443099396",
         },
         feeGrowthInside0LastX128: "578623853248973716254075211374122420",
         feeGrowthInside1LastX128: "753862371855518320276895483260335671933",
       },
       pool: {
         id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
+        tick: "69423",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -1777,9 +1925,11 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
+        token0Price: "0.000966326963647630480782512713203616",
+        token1Price: "1034.846421158799761989942397114447",
         feeGrowthGlobal0X128:
-          "408629739974704797635299124286772049322769815368739",
-        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
+          "408629739974704799282415578221416210531058353027489",
+        feeGrowthGlobal1X128: "3747128717085834861914862651737277967686",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -1811,17 +1961,20 @@ const _getPositionSnapshotsForAddress = async (
           tickIdx: "66360",
           feeGrowthOutside0X128:
             "408629739974703298383037740408488065112564896897994",
+          feeGrowthOutside1X128: "1698037993107335849754537905867751134422",
         },
         tickUpper: {
           tickIdx: "68280",
           feeGrowthOutside0X128:
             "408629739974703667848329485234641941454625510964293",
+          feeGrowthOutside1X128: "2109698239162882263300726004055637944447",
         },
         feeGrowthInside0LastX128: "249743276130140378235555080723146476",
         feeGrowthInside1LastX128: "309916205140695282877416811618660889688",
       },
       pool: {
         id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
+        tick: "69423",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -1832,9 +1985,11 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
+        token0Price: "0.000966326963647630480782512713203616",
+        token1Price: "1034.846421158799761989942397114447",
         feeGrowthGlobal0X128:
-          "408629739974704797635299124286772049322769815368739",
-        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
+          "408629739974704799282415578221416210531058353027489",
+        feeGrowthGlobal1X128: "3747128717085834861914862651737277967686",
         feeTier: "3000",
       },
       liquidity: "3712252541986093194592",
@@ -1866,16 +2021,19 @@ const _getPositionSnapshotsForAddress = async (
           tickIdx: "65520",
           feeGrowthOutside0X128:
             "408629739974702823007235012000956142142776858467753",
+          feeGrowthOutside1X128: "1058654819648446989737672599631186711228",
         },
         tickUpper: {
           tickIdx: "70380",
           feeGrowthOutside0X128: "1055042087802644146496982455315945340",
+          feeGrowthOutside1X128: "1618991476597305352562099540154443099396",
         },
         feeGrowthInside0LastX128: "578623853248973716254075211374122420",
         feeGrowthInside1LastX128: "753862371855518320276895483260335671933",
       },
       pool: {
         id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
+        tick: "69423",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -1886,9 +2044,11 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
+        token0Price: "0.000966326963647630480782512713203616",
+        token1Price: "1034.846421158799761989942397114447",
         feeGrowthGlobal0X128:
-          "408629739974704797635299124286772049322769815368739",
-        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
+          "408629739974704799282415578221416210531058353027489",
+        feeGrowthGlobal1X128: "3747128717085834861914862651737277967686",
         feeTier: "3000",
       },
       liquidity: "599121183885301022157",
@@ -1919,16 +2079,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "70380",
           feeGrowthOutside0X128: "1055042087802644146496982455315945340",
+          feeGrowthOutside1X128: "1618991476597305352562099540154443099396",
         },
         tickUpper: {
           tickIdx: "74520",
           feeGrowthOutside0X128: "399175978069720511655211889370731004",
+          feeGrowthOutside1X128: "814747172230299840010253298333304209184",
         },
         feeGrowthInside0LastX128: "117979979546926647510023982254518266",
         feeGrowthInside1LastX128: "91366872371517625208427285066211028181",
       },
       pool: {
         id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
+        tick: "69423",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -1939,9 +2102,11 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
+        token0Price: "0.000966326963647630480782512713203616",
+        token1Price: "1034.846421158799761989942397114447",
         feeGrowthGlobal0X128:
-          "408629739974704797635299124286772049322769815368739",
-        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
+          "408629739974704799282415578221416210531058353027489",
+        feeGrowthGlobal1X128: "3747128717085834861914862651737277967686",
         feeTier: "3000",
       },
       liquidity: "0",
@@ -1972,16 +2137,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "70380",
           feeGrowthOutside0X128: "1055042087802644146496982455315945340",
+          feeGrowthOutside1X128: "1618991476597305352562099540154443099396",
         },
         tickUpper: {
           tickIdx: "74520",
           feeGrowthOutside0X128: "399175978069720511655211889370731004",
+          feeGrowthOutside1X128: "814747172230299840010253298333304209184",
         },
         feeGrowthInside0LastX128: "117979979546926647510023982254518266",
         feeGrowthInside1LastX128: "91366872371517625208427285066211028181",
       },
       pool: {
         id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
+        tick: "69423",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -1992,9 +2160,11 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
+        token0Price: "0.000966326963647630480782512713203616",
+        token1Price: "1034.846421158799761989942397114447",
         feeGrowthGlobal0X128:
-          "408629739974704797635299124286772049322769815368739",
-        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
+          "408629739974704799282415578221416210531058353027489",
+        feeGrowthGlobal1X128: "3747128717085834861914862651737277967686",
         feeTier: "3000",
       },
       liquidity: "1985281673336174951814",
@@ -2025,16 +2195,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "68600",
           feeGrowthOutside0X128: "3592083494987478115140390694281986925",
+          feeGrowthOutside1X128: "1905369756613557145627550233042107810801",
         },
         tickUpper: {
           tickIdx: "71200",
           feeGrowthOutside0X128: "1005267520028661991510204939196134133",
+          feeGrowthOutside1X128: "1587083763895432216170784741893143557446",
         },
         feeGrowthInside0LastX128: "1152783170298823536153746801726711921",
         feeGrowthInside1LastX128: "1546873979082020760600623202050300670302",
       },
       pool: {
         id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
+        tick: "69436",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -2045,8 +2218,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
-        feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
+        token0Price: "0.0009650734629700752564813791118966439",
+        token1Price: "1036.190547528305351787715548118024",
+        feeGrowthGlobal0X128: "6041251001686561150335047760290768478",
+        feeGrowthGlobal1X128: "5370182964336600313426066571258786564791",
         feeTier: "10000",
       },
       liquidity: "0",
@@ -2078,16 +2253,19 @@ const _getPositionSnapshotsForAddress = async (
           tickIdx: "65520",
           feeGrowthOutside0X128:
             "408629739974702823007235012000956142142776858467753",
+          feeGrowthOutside1X128: "1058654819648446989737672599631186711228",
         },
         tickUpper: {
           tickIdx: "70380",
           feeGrowthOutside0X128: "1055042087802644146496982455315945340",
+          feeGrowthOutside1X128: "1618991476597305352562099540154443099396",
         },
         feeGrowthInside0LastX128: "578623853248973716254075211374122420",
         feeGrowthInside1LastX128: "753862371855518320276895483260335671933",
       },
       pool: {
         id: "0x68f5c0a2de713a54991e01858fd27a3832401849",
+        tick: "69423",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -2098,9 +2276,11 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
+        token0Price: "0.000966326963647630480782512713203616",
+        token1Price: "1034.846421158799761989942397114447",
         feeGrowthGlobal0X128:
-          "408629739974704797635299124286772049322769815368739",
-        feeGrowthGlobal1X128: "3745857640516204470954395742057961101182",
+          "408629739974704799282415578221416210531058353027489",
+        feeGrowthGlobal1X128: "3747128717085834861914862651737277967686",
         feeTier: "3000",
       },
       liquidity: "599121183885301022157",
@@ -2131,16 +2311,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "68600",
           feeGrowthOutside0X128: "3592083494987478115140390694281986925",
+          feeGrowthOutside1X128: "1905369756613557145627550233042107810801",
         },
         tickUpper: {
           tickIdx: "71200",
           feeGrowthOutside0X128: "1005267520028661991510204939196134133",
+          feeGrowthOutside1X128: "1587083763895432216170784741893143557446",
         },
         feeGrowthInside0LastX128: "1152783170298823536153746801726711921",
         feeGrowthInside1LastX128: "1546873979082020760600623202050300670302",
       },
       pool: {
         id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
+        tick: "69436",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -2151,8 +2334,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
-        feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
+        token0Price: "0.0009650734629700752564813791118966439",
+        token1Price: "1036.190547528305351787715548118024",
+        feeGrowthGlobal0X128: "6041251001686561150335047760290768478",
+        feeGrowthGlobal1X128: "5370182964336600313426066571258786564791",
         feeTier: "10000",
       },
       liquidity: "2915438015516360715169",
@@ -2183,16 +2368,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "68600",
           feeGrowthOutside0X128: "3592083494987478115140390694281986925",
+          feeGrowthOutside1X128: "1905369756613557145627550233042107810801",
         },
         tickUpper: {
           tickIdx: "71200",
           feeGrowthOutside0X128: "1005267520028661991510204939196134133",
+          feeGrowthOutside1X128: "1587083763895432216170784741893143557446",
         },
         feeGrowthInside0LastX128: "1152783170298823536153746801726711921",
         feeGrowthInside1LastX128: "1546873979082020760600623202050300670302",
       },
       pool: {
         id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
+        tick: "69436",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -2203,8 +2391,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
-        feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
+        token0Price: "0.0009650734629700752564813791118966439",
+        token1Price: "1036.190547528305351787715548118024",
+        feeGrowthGlobal0X128: "6041251001686561150335047760290768478",
+        feeGrowthGlobal1X128: "5370182964336600313426066571258786564791",
         feeTier: "10000",
       },
       liquidity: "2915438015516360715169",
@@ -2235,16 +2425,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "68600",
           feeGrowthOutside0X128: "3592083494987478115140390694281986925",
+          feeGrowthOutside1X128: "1905369756613557145627550233042107810801",
         },
         tickUpper: {
           tickIdx: "71200",
           feeGrowthOutside0X128: "1005267520028661991510204939196134133",
+          feeGrowthOutside1X128: "1587083763895432216170784741893143557446",
         },
         feeGrowthInside0LastX128: "1152783170298823536153746801726711921",
         feeGrowthInside1LastX128: "1546873979082020760600623202050300670302",
       },
       pool: {
         id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
+        tick: "69436",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -2255,8 +2448,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
-        feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
+        token0Price: "0.0009650734629700752564813791118966439",
+        token1Price: "1036.190547528305351787715548118024",
+        feeGrowthGlobal0X128: "6041251001686561150335047760290768478",
+        feeGrowthGlobal1X128: "5370182964336600313426066571258786564791",
         feeTier: "10000",
       },
       liquidity: "1993994645087620286847",
@@ -2287,16 +2482,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "68600",
           feeGrowthOutside0X128: "3592083494987478115140390694281986925",
+          feeGrowthOutside1X128: "1905369756613557145627550233042107810801",
         },
         tickUpper: {
           tickIdx: "70600",
           feeGrowthOutside0X128: "1137801005940769962912412320281126689",
+          feeGrowthOutside1X128: "1727138979360386882767390885074563821285",
         },
         feeGrowthInside0LastX128: "1032347207054123480002046434301117616",
         feeGrowthInside1LastX128: "1447182889818007541419670566192385705703",
       },
       pool: {
         id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
+        tick: "69436",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -2307,8 +2505,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
-        feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
+        token0Price: "0.0009650734629700752564813791118966439",
+        token1Price: "1036.190547528305351787715548118024",
+        feeGrowthGlobal0X128: "6041251001686561150335047760290768478",
+        feeGrowthGlobal1X128: "5370182964336600313426066571258786564791",
         feeTier: "10000",
       },
       liquidity: "0",
@@ -2339,16 +2539,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "68600",
           feeGrowthOutside0X128: "3592083494987478115140390694281986925",
+          feeGrowthOutside1X128: "1905369756613557145627550233042107810801",
         },
         tickUpper: {
           tickIdx: "70600",
           feeGrowthOutside0X128: "1137801005940769962912412320281126689",
+          feeGrowthOutside1X128: "1727138979360386882767390885074563821285",
         },
         feeGrowthInside0LastX128: "1032347207054123480002046434301117616",
         feeGrowthInside1LastX128: "1447182889818007541419670566192385705703",
       },
       pool: {
         id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
+        tick: "69436",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -2359,8 +2562,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
-        feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
+        token0Price: "0.0009650734629700752564813791118966439",
+        token1Price: "1036.190547528305351787715548118024",
+        feeGrowthGlobal0X128: "6041251001686561150335047760290768478",
+        feeGrowthGlobal1X128: "5370182964336600313426066571258786564791",
         feeTier: "10000",
       },
       liquidity: "1807570232766567045945",
@@ -2391,16 +2596,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "68600",
           feeGrowthOutside0X128: "3592083494987478115140390694281986925",
+          feeGrowthOutside1X128: "1905369756613557145627550233042107810801",
         },
         tickUpper: {
           tickIdx: "70600",
           feeGrowthOutside0X128: "1137801005940769962912412320281126689",
+          feeGrowthOutside1X128: "1727138979360386882767390885074563821285",
         },
         feeGrowthInside0LastX128: "1032347207054123480002046434301117616",
         feeGrowthInside1LastX128: "1447182889818007541419670566192385705703",
       },
       pool: {
         id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
+        tick: "69436",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -2411,8 +2619,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
-        feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
+        token0Price: "0.0009650734629700752564813791118966439",
+        token1Price: "1036.190547528305351787715548118024",
+        feeGrowthGlobal0X128: "6041251001686561150335047760290768478",
+        feeGrowthGlobal1X128: "5370182964336600313426066571258786564791",
         feeTier: "10000",
       },
       liquidity: "1675106390021065300984",
@@ -2443,16 +2653,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "68600",
           feeGrowthOutside0X128: "3592083494987478115140390694281986925",
+          feeGrowthOutside1X128: "1905369756613557145627550233042107810801",
         },
         tickUpper: {
           tickIdx: "71200",
           feeGrowthOutside0X128: "1005267520028661991510204939196134133",
+          feeGrowthOutside1X128: "1587083763895432216170784741893143557446",
         },
         feeGrowthInside0LastX128: "1152783170298823536153746801726711921",
         feeGrowthInside1LastX128: "1546873979082020760600623202050300670302",
       },
       pool: {
         id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
+        tick: "69436",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -2463,8 +2676,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
-        feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
+        token0Price: "0.0009650734629700752564813791118966439",
+        token1Price: "1036.190547528305351787715548118024",
+        feeGrowthGlobal0X128: "6041251001686561150335047760290768478",
+        feeGrowthGlobal1X128: "5370182964336600313426066571258786564791",
         feeTier: "10000",
       },
       liquidity: "614469663976146131537",
@@ -2495,16 +2710,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "68600",
           feeGrowthOutside0X128: "3592083494987478115140390694281986925",
+          feeGrowthOutside1X128: "1905369756613557145627550233042107810801",
         },
         tickUpper: {
           tickIdx: "70600",
           feeGrowthOutside0X128: "1137801005940769962912412320281126689",
+          feeGrowthOutside1X128: "1727138979360386882767390885074563821285",
         },
         feeGrowthInside0LastX128: "1032347207054123480002046434301117616",
         feeGrowthInside1LastX128: "1447182889818007541419670566192385705703",
       },
       pool: {
         id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
+        tick: "69436",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -2515,8 +2733,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
-        feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
+        token0Price: "0.0009650734629700752564813791118966439",
+        token1Price: "1036.190547528305351787715548118024",
+        feeGrowthGlobal0X128: "6041251001686561150335047760290768478",
+        feeGrowthGlobal1X128: "5370182964336600313426066571258786564791",
         feeTier: "10000",
       },
       liquidity: "1675106390021065300984",
@@ -2547,16 +2767,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "-70600",
           feeGrowthOutside0X128: "0",
+          feeGrowthOutside1X128: "0",
         },
         tickUpper: {
           tickIdx: "-62600",
           feeGrowthOutside0X128: "0",
+          feeGrowthOutside1X128: "0",
         },
         feeGrowthInside0LastX128: "0",
         feeGrowthInside1LastX128: "0",
       },
       pool: {
         id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
+        tick: "69436",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -2567,8 +2790,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
-        feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
+        token0Price: "0.0009650734629700752564813791118966439",
+        token1Price: "1036.190547528305351787715548118024",
+        feeGrowthGlobal0X128: "6041251001686561150335047760290768478",
+        feeGrowthGlobal1X128: "5370182964336600313426066571258786564791",
         feeTier: "10000",
       },
       liquidity: "0",
@@ -2599,16 +2824,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "68600",
           feeGrowthOutside0X128: "3592083494987478115140390694281986925",
+          feeGrowthOutside1X128: "1905369756613557145627550233042107810801",
         },
         tickUpper: {
           tickIdx: "71200",
           feeGrowthOutside0X128: "1005267520028661991510204939196134133",
+          feeGrowthOutside1X128: "1587083763895432216170784741893143557446",
         },
         feeGrowthInside0LastX128: "1152783170298823536153746801726711921",
         feeGrowthInside1LastX128: "1546873979082020760600623202050300670302",
       },
       pool: {
         id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
+        tick: "69436",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -2619,8 +2847,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
-        feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
+        token0Price: "0.0009650734629700752564813791118966439",
+        token1Price: "1036.190547528305351787715548118024",
+        feeGrowthGlobal0X128: "6041251001686561150335047760290768478",
+        feeGrowthGlobal1X128: "5370182964336600313426066571258786564791",
         feeTier: "10000",
       },
       liquidity: "614469663976146131537",
@@ -2651,16 +2881,19 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "-70600",
           feeGrowthOutside0X128: "0",
+          feeGrowthOutside1X128: "0",
         },
         tickUpper: {
           tickIdx: "-62600",
           feeGrowthOutside0X128: "0",
+          feeGrowthOutside1X128: "0",
         },
         feeGrowthInside0LastX128: "0",
         feeGrowthInside1LastX128: "0",
       },
       pool: {
         id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
+        tick: "69436",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -2671,8 +2904,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
-        feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
+        token0Price: "0.0009650734629700752564813791118966439",
+        token1Price: "1036.190547528305351787715548118024",
+        feeGrowthGlobal0X128: "6041251001686561150335047760290768478",
+        feeGrowthGlobal1X128: "5370182964336600313426066571258786564791",
         feeTier: "10000",
       },
       liquidity: "377285160759165397460405",
@@ -2703,10 +2938,12 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "62600",
           feeGrowthOutside0X128: "4175743222642319274421504387215641956",
+          feeGrowthOutside1X128: "3072872041986859905725853460809992817585",
         },
         tickUpper: {
           tickIdx: "70000",
           feeGrowthOutside0X128: "1453105681736323260857958811178443461",
+          feeGrowthOutside1X128: "2124113672808580431871553394733271289712",
         },
         feeGrowthInside0LastX128:
           "115792089237316195423570985008687907853269681885695848445274886435864774356995",
@@ -2715,6 +2952,7 @@ const _getPositionSnapshotsForAddress = async (
       },
       pool: {
         id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
+        tick: "69436",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -2725,8 +2963,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
-        feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
+        token0Price: "0.0009650734629700752564813791118966439",
+        token1Price: "1036.190547528305351787715548118024",
+        feeGrowthGlobal0X128: "6041251001686561150335047760290768478",
+        feeGrowthGlobal1X128: "5370182964336600313426066571258786564791",
         feeTier: "10000",
       },
       liquidity: "0",
@@ -2757,10 +2997,12 @@ const _getPositionSnapshotsForAddress = async (
         tickLower: {
           tickIdx: "62600",
           feeGrowthOutside0X128: "4175743222642319274421504387215641956",
+          feeGrowthOutside1X128: "3072872041986859905725853460809992817585",
         },
         tickUpper: {
           tickIdx: "70000",
           feeGrowthOutside0X128: "1453105681736323260857958811178443461",
+          feeGrowthOutside1X128: "2124113672808580431871553394733271289712",
         },
         feeGrowthInside0LastX128:
           "115792089237316195423570985008687907853269681885695848445274886435864774356995",
@@ -2769,6 +3011,7 @@ const _getPositionSnapshotsForAddress = async (
       },
       pool: {
         id: "0x730691cdac3cbd4d41fc5eb9d8abbb0cea795b94",
+        tick: "69436",
         token0: {
           id: "0x4200000000000000000000000000000000000006",
           decimals: "18",
@@ -2779,8 +3022,10 @@ const _getPositionSnapshotsForAddress = async (
           decimals: "18",
           symbol: "OP",
         },
-        feeGrowthGlobal0X128: "6039853140463460417921953375360880146",
-        feeGrowthGlobal1X128: "5369885248107052067473021111416811673335",
+        token0Price: "0.0009650734629700752564813791118966439",
+        token1Price: "1036.190547528305351787715548118024",
+        feeGrowthGlobal0X128: "6041251001686561150335047760290768478",
+        feeGrowthGlobal1X128: "5370182964336600313426066571258786564791",
         feeTier: "10000",
       },
       liquidity: "455228734519025101210",
@@ -2821,16 +3066,19 @@ const _getPositionSnapshotsForAddress = async (
             tickLower{
               tickIdx 
               feeGrowthOutside0X128
+              feeGrowthOutside1X128
             }
             tickUpper{
               tickIdx
               feeGrowthOutside0X128
+              feeGrowthOutside1X128
             }
             feeGrowthInside0LastX128
             feeGrowthInside1LastX128
           }
           pool {
             id
+            tick
             token0{
               id
               decimals
@@ -2841,6 +3089,8 @@ const _getPositionSnapshotsForAddress = async (
               decimals
               symbol
             }
+            token0Price
+            token1Price
             feeGrowthGlobal0X128
             feeGrowthGlobal1X128
             feeTier
@@ -2899,12 +3149,12 @@ export const getPositionSnapshots = async (
       // open lp
       let price0 = new BigNumber(0);
       let price1 = new BigNumber(0);
-      if (StableCoinSet.has(p.pool.token0.id)) {
+      if (StableCoinSet.has(p.pool.token0.id.toLowerCase())) {
         price0 = new BigNumber(1);
         price1 = new BigNumber(p.transaction.mints[0].amountUSD)
           .minus(p.depositedToken0)
           .div(p.depositedToken1);
-      } else if (StableCoinSet.has(p.pool.token1.id)) {
+      } else if (StableCoinSet.has(p.pool.token1.id.toLowerCase())) {
         price1 = new BigNumber(1);
         price0 = new BigNumber(p.transaction.mints[0].amountUSD)
           .minus(p.depositedToken1)
@@ -2940,12 +3190,12 @@ export const getPositionSnapshots = async (
         .forEach((r) => {
           let price0 = new BigNumber(0);
           let price1 = new BigNumber(0);
-          if (StableCoinSet.has(p.pool.token0.id)) {
+          if (StableCoinSet.has(p.pool.token0.id.toLowerCase())) {
             price0 = new BigNumber(1);
             price1 = new BigNumber(p.transaction.burns[0].amountUSD)
               .minus(p.withdrawnToken0)
               .div(p.withdrawnToken1);
-          } else if (StableCoinSet.has(p.pool.token1.id)) {
+          } else if (StableCoinSet.has(p.pool.token1.id.toLowerCase())) {
             price1 = new BigNumber(1);
             price0 = new BigNumber(p.transaction.burns[0].amountUSD)
               .minus(p.withdrawnToken1)
@@ -2975,9 +3225,24 @@ export const getPositionSnapshots = async (
     const positionSnapshot = positionSnapshots.find(
       (pp) => pp.position.id === r1.id
     );
-    const price0 = positionSnapshot?.pool.token0Price || 0;
-    const price1 = positionSnapshot?.pool.token1Price || 0;
-
+    // the token0Price is not usd price but ratio
+    const priceRatio0 = positionSnapshot?.pool.token0Price || 0;
+    const priceRatio1 = positionSnapshot?.pool.token1Price || 0;
+    let price0 = 0;
+    let price1 = 0;
+    if (
+      StableCoinSet.has(positionSnapshot?.pool.token0.id.toLowerCase() || "")
+    ) {
+      // token0 is a stable token
+      price0 = 1;
+      price1 = Number(priceRatio0) * price0;
+    } else if (
+      StableCoinSet.has(positionSnapshot?.pool.token1.id.toLowerCase() || "")
+    ) {
+      // token1 is a stable token
+      price1 = 1;
+      price0 = Number(priceRatio1) * price1;
+    }
     const fees = calculatePositionFees(
       positionSnapshot!.pool,
       positionSnapshot!.position,

@@ -464,15 +464,15 @@ export const LPHistoryTable = ({
                     <div>
                       <div>Number</div>
                       <div></div>
-                      <div>{record.feeToken1?.decimalPlaces(3).toString()}</div>
+                      <div>{record.feeToken0?.decimalPlaces(3).toString()}</div>
                     </div>
                     <div>
                       <div>Value</div>
                       <div></div>
                       <div>
                         {formatDollarAmount(
-                          record.feeToken1
-                            ?.multipliedBy(record.equityToken1Price!)
+                          record.feeToken0
+                            ?.multipliedBy(record.equityToken0Price!)
                             .toNumber()
                         )}
                       </div>
