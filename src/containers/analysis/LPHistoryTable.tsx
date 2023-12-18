@@ -35,9 +35,14 @@ import { CheckboxValueType } from "antd/es/checkbox/Group";
 import { getCoingeckoToken } from "../../repos/coingecko";
 import { usePoolContext } from "../../context/pool/poolContext";
 import { PoolActionType } from "../../context/pool/poolReducer";
-import { NETWORKS } from "../../common/network";
+import {
+  NETWORKS,
+  getCurrentNetwork,
+  getEtherscanUrlForTx,
+} from "../../common/network";
 import { ScreenWidth } from "../../utils/styled";
 import { Recoverable } from "repl";
+import { getAge, getDuration, getReadableDateTime } from "../../utils/datetime";
 
 const PairToken = styled.div`
   display: flex;
@@ -529,6 +534,72 @@ export const LPHistoryTable = ({
               {formatDollarAmount(Number(record.feeUSD?.toString() || 0))}
             </h3>
           </Popover>
+        );
+      },
+    },
+    {
+      title: "Duration",
+      key: "duration",
+      width: 30,
+      render: (_, record) => {
+        return record.opening ? (
+          <h3>
+            {getDuration(
+              Number(record.openTimestamp) * 1000,
+              new Date().getTime()
+            )}
+          </h3>
+        ) : (
+          <h3>
+            {getDuration(
+              Number(record.openTimestamp) * 1000,
+              Number(record.closeTimestamp) * 1000
+            )}
+          </h3>
+        );
+      },
+    },
+    {
+      title: "Open Date",
+      key: "openTimeStamp",
+      width: 40,
+      render: (_, record) => {
+        return (
+          <PairToken>
+            <h3>
+              {getReadableDateTime(Number(record.openTimestamp) * 1000)}
+              <a
+                target="_blank"
+                href={getEtherscanUrlForTx(record.openTransaction)}
+              >
+                <FontAwesomeIcon icon={faExternalLinkAlt} />
+              </a>
+            </h3>
+          </PairToken>
+        );
+      },
+    },
+    {
+      title: "Close Date",
+      key: "closeTimeStamp",
+      width: 40,
+      render: (_, record) => {
+        return (
+          <PairToken>
+            {record.opening ? (
+              <h3>-</h3>
+            ) : (
+              <h3>
+                {getReadableDateTime(Number(record.closeTimestamp) * 1000)}
+                <a
+                  target="_blank"
+                  href={getEtherscanUrlForTx(record.closeTransaction || "")}
+                >
+                  <FontAwesomeIcon icon={faExternalLinkAlt} />
+                </a>
+              </h3>
+            )}
+          </PairToken>
         );
       },
     },

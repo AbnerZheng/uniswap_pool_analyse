@@ -15,7 +15,19 @@ export const getAge = (timestamp: number) => {
   }
 };
 
-
+export const getDuration = (timestampStart: number, timestampEnd: number) => {
+  let secondsPast = (timestampEnd - timestampStart) / 1000;
+  let output = "";
+  if (secondsPast > 86400) {
+    output += parseInt((secondsPast / 86400).toString()) + "d";
+    secondsPast = secondsPast % 86400;
+  }
+  const h = secondsPast / 3600;
+  output += parseInt(h.toString()) + "h";
+  secondsPast = secondsPast % 3600;
+  output += parseInt((secondsPast / 60).toString()) + "m";
+  return output;
+};
 
 export const getReadableDateTime = (timestamp: number | Date) => {
   const date = new Date(timestamp);

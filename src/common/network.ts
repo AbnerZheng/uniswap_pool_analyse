@@ -31,6 +31,7 @@ export const NETWORKS: Network[] = [
       "https://seeklogo.com/images/E/ethereum-logo-EC6CDBA45B-seeklogo.com.png",
     subgraphEndpoint:
       "https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3",
+    etherscan: "https://etherscan.io/",
     totalValueLockedUSD_gte: 1000000,
     volumeUSD_gte: 500000,
   },
@@ -43,6 +44,7 @@ export const NETWORKS: Network[] = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgwyOAYn_Z1BalQYMfN8zVqwenavJVSO9SUZ1rz0ZerShW-5Ubzf6U96kLODC-ta2bVks&usqp=CAU",
     subgraphEndpoint:
       "https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-v3-polygon",
+    etherscan: "",
     totalValueLockedUSD_gte: 100000,
     volumeUSD_gte: 50000,
   },
@@ -54,6 +56,7 @@ export const NETWORKS: Network[] = [
     logoURI: "https://optimistic.etherscan.io/images/brandassets/optimism.svg",
     subgraphEndpoint:
       "https://api.thegraph.com/subgraphs/name/ianlapham/optimism-post-regenesis",
+    etherscan: "https://optimistic.etherscan.io",
     totalValueLockedUSD_gte: 1000000,
     volumeUSD_gte: 500000,
   },
@@ -67,6 +70,7 @@ export const NETWORKS: Network[] = [
     isNew: false,
     subgraphEndpoint:
       "https://api.thegraph.com/subgraphs/name/jesse-sawa/uniswap-celo",
+    etherscan: "",
     totalValueLockedUSD_gte: 10000,
     volumeUSD_gte: 1000,
   },
@@ -85,6 +89,7 @@ export const NETWORKS: Network[] = [
     //   "https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-arbitrum-one",
     subgraphEndpoint:
       "https://api.thegraph.com/subgraphs/name/ianlapham/arbitrum-minimal",
+    etherscan: "https://arbiscan.io",
     totalValueLockedUSD_gte: 0,
     volumeUSD_gte: 0,
   },
@@ -98,6 +103,7 @@ export const NETWORKS: Network[] = [
     logoURI: "https://info.uniswap.org/static/media/bnb-logo.797868eb.svg",
     subgraphEndpoint:
       "https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-v3-bsc",
+    etherscan: "",
     totalValueLockedUSD_gte: 100000,
     volumeUSD_gte: 50000,
   },
@@ -107,6 +113,11 @@ let currentNetwork = NETWORKS[0];
 
 export const getCurrentNetwork = (): Network => {
   return currentNetwork;
+};
+
+export const getEtherscanUrlForTx = (txHash: string): string => {
+  const network = getCurrentNetwork();
+  return `${network.etherscan}/tx/${txHash}`;
 };
 
 export const setCurrentNetwork = (network: Network) => {

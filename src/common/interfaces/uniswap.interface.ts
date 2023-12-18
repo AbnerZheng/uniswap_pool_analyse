@@ -10,6 +10,7 @@ export interface Network {
   isNew?: boolean;
   error?: string;
   subgraphEndpoint: string;
+  etherscan: string;
 
   // for pool overview
   totalValueLockedUSD_gte: number;
