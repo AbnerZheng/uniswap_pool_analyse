@@ -3314,9 +3314,13 @@ export const getPositionSnapshots = async (
           const feeToken1USD = r.feeToken1.multipliedBy(r.equityToken1Price);
           r.feeUSD = feeToken0USD.plus(feeToken1USD);
 
-          r.equityToken0 = new BigNumber(p.withdrawnToken0).plus(r.feeToken0);
-          r.equityToken1 = new BigNumber(p.withdrawnToken1).plus(r.feeToken1);
-          r.equityUSD = r.feeUSD.plus(p.transaction.burns[0].amountUSD);
+          r.withdrawToken0 = new BigNumber(p.withdrawnToken0);
+          r.withdrawToken1 = new BigNumber(p.withdrawnToken1);
+          r.withdrawnUSD = new BigNumber(p.transaction.burns[0].amountUSD);
+
+          r.equityToken0 = r.withdrawToken0.plus(r.feeToken0);
+          r.equityToken1 = r.withdrawToken1.plus(r.feeToken1);
+          r.equityUSD = r.feeUSD.plus(r.withdrawnUSD);
           r.closeTransaction = p.transaction.burns[0].transaction.id;
           r.closeTimestamp = p.timestamp;
         });
@@ -3387,11 +3391,15 @@ export const getPositionSnapshots = async (
     const amount0 = Number(position.amount0.toSignificant(4));
     const amount1 = Number(position.amount1.toSignificant(4));
 
-    r1.equityToken0 = new BigNumber(amount0).plus(r1.feeToken0);
-    r1.equityToken1 = new BigNumber(amount1).plus(r1.feeToken1);
-    r1.equityUSD = r1.equityToken0
+    r1.withdrawToken0 = new BigNumber(amount0);
+    r1.withdrawToken1 = new BigNumber(amount1);
+    r1.withdrawnUSD = r1.withdrawToken0
       .multipliedBy(price0)
-      .plus(r1.equityToken1.multipliedBy(price1));
+      .plus(r1.withdrawToken1.multipliedBy(price1));
+
+    r1.equityToken0 = r1.withdrawToken0.plus(r1.feeToken0);
+    r1.equityToken1 = r1.withdrawToken1.plus(r1.feeToken1);
+    r1.equityUSD = r1.withdrawnUSD.plus(r1.feeUSD);
     r1.equityToken0Price = new BigNumber(price0);
     r1.equityToken1Price = new BigNumber(price1);
   }

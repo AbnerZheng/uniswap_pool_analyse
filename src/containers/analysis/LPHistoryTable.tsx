@@ -434,7 +434,7 @@ export const LPHistoryTable = ({
     {
       title: "Equity(Fee included)",
       key: "equity",
-      width: 40,
+      width: 35,
       render: (_, record) => {
         return (
           <Popover
@@ -534,6 +534,219 @@ export const LPHistoryTable = ({
             }
           >
             <h3>{formatDollarAmount(record.equityUSD?.toNumber() || 0)}</h3>
+          </Popover>
+        );
+      },
+    },
+    {
+      title: "Liquidity",
+      key: "liquidity",
+      width: 35,
+      render: (_, record) => {
+        return (
+          <Popover
+            placement="top"
+            color="rgba(0,0,0,0.875)"
+            content={
+              <div>
+                <div>
+                  <TokenIcon>
+                    <b>{record.tokenSymbol0}</b>
+                    <a
+                      target="_blank"
+                      href={`https://www.coingecko.com/en/coins/${getCoingeckoToken(
+                        record.tokenID0
+                      )?.id}`}
+                    >
+                      <FontAwesomeIcon
+                        style={{ marginLeft: 6 }}
+                        icon={faExternalLinkAlt}
+                      />
+                    </a>
+                  </TokenIcon>
+                  <Table className="adjust-padding-right">
+                    <div>
+                      <div>Price</div>
+                      <div></div>
+                      <div>
+                        {formatDollarAmount(Number(record.equityToken0Price))}
+                      </div>
+                    </div>
+                    <div>
+                      <div>Number</div>
+                      <div></div>
+                      <div>
+                        {record.withdrawToken0?.decimalPlaces(3).toString()}
+                      </div>
+                    </div>
+                    <div>
+                      <div>Value</div>
+                      <div></div>
+                      <div>
+                        {formatDollarAmount(
+                          record.withdrawToken0
+                            ?.multipliedBy(record.equityToken0Price!)
+                            .toNumber()
+                        )}
+                      </div>
+                    </div>
+                  </Table>
+                </div>
+
+                <div style={{ marginTop: 16 }}>
+                  <TokenIcon>
+                    {/* <img src={token1.logoURI} /> */}
+                    <b>{record.tokenSymbol1}</b>
+                    <a
+                      target="_blank"
+                      href={`https://www.coingecko.com/en/coins/${getCoingeckoToken(
+                        record.tokenID1
+                      )?.id}`}
+                    >
+                      <FontAwesomeIcon
+                        style={{ marginLeft: 6 }}
+                        icon={faExternalLinkAlt}
+                      />
+                    </a>
+                  </TokenIcon>
+                  <Table className="adjust-padding-right">
+                    <div>
+                      <div>Price</div>
+                      <div></div>
+                      <div>
+                        {formatDollarAmount(Number(record.equityToken1Price))}
+                      </div>
+                    </div>
+                    <div>
+                      <div>Number</div>
+                      <div></div>
+                      <div>
+                        {record.withdrawToken1?.decimalPlaces(3).toString()}
+                      </div>
+                    </div>
+                    <div>
+                      <div>USD</div>
+                      <div></div>
+                      <div>
+                        {formatDollarAmount(
+                          record.equityToken1Price
+                            ?.multipliedBy(record.withdrawToken1!)
+                            .toNumber()
+                        )}
+                      </div>
+                    </div>
+                  </Table>
+                </div>
+              </div>
+            }
+          >
+            <h3>{formatDollarAmount(record.withdrawnUSD?.toNumber() || 0)}</h3>
+          </Popover>
+        );
+      },
+    },
+    {
+      title: "Fee",
+      key: "feeUSD",
+      width: 35,
+      render: (_, record) => {
+        console.log(record);
+        return (
+          <Popover
+            placement="right"
+            color="rgba(0,0,0,0.875)"
+            content={
+              <div>
+                <div>
+                  <TokenIcon>
+                    <b>{record.tokenSymbol0}</b>
+                    <a
+                      target="_blank"
+                      href={`https://www.coingecko.com/en/coins/${getCoingeckoToken(
+                        record.tokenID0
+                      )?.id}`}
+                    >
+                      <FontAwesomeIcon
+                        style={{ marginLeft: 6 }}
+                        icon={faExternalLinkAlt}
+                      />
+                    </a>
+                  </TokenIcon>
+                  <Table className="adjust-padding-right">
+                    <div>
+                      <div>Price</div>
+                      <div></div>
+                      <div>
+                        {formatDollarAmount(Number(record.equityToken0Price))}
+                      </div>
+                    </div>
+                    <div>
+                      <div>Number</div>
+                      <div></div>
+                      <div>{record.feeToken0?.decimalPlaces(3).toString()}</div>
+                    </div>
+                    <div>
+                      <div>Value</div>
+                      <div></div>
+                      <div>
+                        {formatDollarAmount(
+                          record.feeToken0
+                            ?.multipliedBy(record.equityToken0Price!)
+                            .toNumber()
+                        )}
+                      </div>
+                    </div>
+                  </Table>
+                </div>
+
+                <div style={{ marginTop: 16 }}>
+                  <TokenIcon>
+                    {/* <img src={token1.logoURI} /> */}
+                    <b>{record.tokenSymbol1}</b>
+                    <a
+                      target="_blank"
+                      href={`https://www.coingecko.com/en/coins/${getCoingeckoToken(
+                        record.tokenID1
+                      )?.id}`}
+                    >
+                      <FontAwesomeIcon
+                        style={{ marginLeft: 6 }}
+                        icon={faExternalLinkAlt}
+                      />
+                    </a>
+                  </TokenIcon>
+                  <Table className="adjust-padding-right">
+                    <div>
+                      <div>Price</div>
+                      <div></div>
+                      <div>
+                        {formatDollarAmount(Number(record.equityToken1Price))}
+                      </div>
+                    </div>
+                    <div>
+                      <div>Number</div>
+                      <div></div>
+                      <div>{record.feeToken1?.decimalPlaces(3).toString()}</div>
+                    </div>
+                    <div>
+                      <div>USD</div>
+                      <div></div>
+                      <div>
+                        {formatDollarAmount(
+                          record.equityToken1Price
+                            ?.multipliedBy(record.feeToken1!)
+                            .toNumber()
+                        )}
+                      </div>
+                    </div>
+                  </Table>
+                </div>
+              </div>
+            }
+          >
+            <h3>
+              {formatDollarAmount(Number(record.feeUSD?.toString() || 0))}
+            </h3>
           </Popover>
         );
       },
@@ -645,112 +858,7 @@ export const LPHistoryTable = ({
         );
       },
     },
-    {
-      title: "Fee",
-      key: "feeUSD",
-      width: 40,
-      render: (_, record) => {
-        console.log(record);
-        return (
-          <Popover
-            placement="right"
-            color="rgba(0,0,0,0.875)"
-            content={
-              <div>
-                <div>
-                  <TokenIcon>
-                    <b>{record.tokenSymbol0}</b>
-                    <a
-                      target="_blank"
-                      href={`https://www.coingecko.com/en/coins/${getCoingeckoToken(
-                        record.tokenID0
-                      )?.id}`}
-                    >
-                      <FontAwesomeIcon
-                        style={{ marginLeft: 6 }}
-                        icon={faExternalLinkAlt}
-                      />
-                    </a>
-                  </TokenIcon>
-                  <Table className="adjust-padding-right">
-                    <div>
-                      <div>Price</div>
-                      <div></div>
-                      <div>
-                        {formatDollarAmount(Number(record.equityToken0Price))}
-                      </div>
-                    </div>
-                    <div>
-                      <div>Number</div>
-                      <div></div>
-                      <div>{record.feeToken0?.decimalPlaces(3).toString()}</div>
-                    </div>
-                    <div>
-                      <div>Value</div>
-                      <div></div>
-                      <div>
-                        {formatDollarAmount(
-                          record.feeToken0
-                            ?.multipliedBy(record.equityToken0Price!)
-                            .toNumber()
-                        )}
-                      </div>
-                    </div>
-                  </Table>
-                </div>
 
-                <div style={{ marginTop: 16 }}>
-                  <TokenIcon>
-                    {/* <img src={token1.logoURI} /> */}
-                    <b>{record.tokenSymbol1}</b>
-                    <a
-                      target="_blank"
-                      href={`https://www.coingecko.com/en/coins/${getCoingeckoToken(
-                        record.tokenID1
-                      )?.id}`}
-                    >
-                      <FontAwesomeIcon
-                        style={{ marginLeft: 6 }}
-                        icon={faExternalLinkAlt}
-                      />
-                    </a>
-                  </TokenIcon>
-                  <Table className="adjust-padding-right">
-                    <div>
-                      <div>Price</div>
-                      <div></div>
-                      <div>
-                        {formatDollarAmount(Number(record.equityToken1Price))}
-                      </div>
-                    </div>
-                    <div>
-                      <div>Number</div>
-                      <div></div>
-                      <div>{record.feeToken1?.decimalPlaces(3).toString()}</div>
-                    </div>
-                    <div>
-                      <div>USD</div>
-                      <div></div>
-                      <div>
-                        {formatDollarAmount(
-                          record.equityToken1Price
-                            ?.multipliedBy(record.feeToken1!)
-                            .toNumber()
-                        )}
-                      </div>
-                    </div>
-                  </Table>
-                </div>
-              </div>
-            }
-          >
-            <h3>
-              {formatDollarAmount(Number(record.feeUSD?.toString() || 0))}
-            </h3>
-          </Popover>
-        );
-      },
-    },
     {
       title: "Duration",
       key: "duration",
@@ -832,12 +940,8 @@ export const LPHistoryTable = ({
       <AntdTable
         columns={columns}
         dataSource={lpHistoryRecords}
-        scroll={{
-          x: columns
-            .map((c) => c.width)
-            .reduce((a, b) => Number(a) + Number(b), 0),
-        }}
-        size="middle"
+        scroll={{ x: 1000 }}
+        size="small"
         loading={isLoading}
       />
     </ConfigProvider>

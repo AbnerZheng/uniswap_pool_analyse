@@ -108,18 +108,22 @@ export interface PositionSnapshot {
   collectedFeesToken0: string;
   collectedFeesToken1: string;
   transaction: {
-    mints: [{
-      transaction: {
-        id: string
-      }
-      amountUSD: string;
-    }]
-    burns: [{
-      transaction: {
-        id: string;
-      }
-      amountUSD: string;
-    }];
+    mints: [
+      {
+        transaction: {
+          id: string;
+        };
+        amountUSD: string;
+      },
+    ];
+    burns: [
+      {
+        transaction: {
+          id: string;
+        };
+        amountUSD: string;
+      },
+    ];
   };
 }
 
@@ -147,6 +151,11 @@ export interface LPHoldingRecord {
   feeToken0?: BigNumber;
   feeToken1?: BigNumber;
   // lp closed or present value if still opening
+
+  withdrawnUSD?: BigNumber;
+  withdrawToken0?: BigNumber;
+  withdrawToken1?: BigNumber;
+
   // fees are included
   equityUSD?: BigNumber;
   equityToken0?: BigNumber;
